@@ -63,7 +63,7 @@ namespace back
             List<string[]> classListSet = new List<string[]> { };
             string[] classListRow;
 
-            sql = "select * from tbl_ClockIn;";
+            sql = "select * from tbl_ClockIn  ORDER BY  fld_dateTime desc;";
 
             
                 connection.Open();
@@ -119,7 +119,7 @@ namespace back
             List<string[]> classListSet = new List<string[]> { };
             string[] classListRow;
 
-            sql = "select * from tbl_ClockIn where fld_lastName='Mbhatha';";
+            sql = "select * from tbl_ClockIn where fld_lastName='Mbhatha'  ORDER BY  fld_dateTime desc;";
 
 
             connection.Open();
@@ -175,7 +175,7 @@ namespace back
             List<string[]> classListSet = new List<string[]> { };
             string[] classListRow;
 
-            sql = "select * from tbl_ClockIn where fld_lastName='Mufamadi';";
+            sql = "select * from tbl_ClockIn where fld_lastName='Mufamadi'  ORDER BY  fld_dateTime desc;";
 
 
             connection.Open();
@@ -231,7 +231,7 @@ namespace back
             List<string[]> classListSet = new List<string[]> { };
             string[] classListRow;
 
-            sql = "select * from tbl_ClockIn where fld_lastName='Sekgota';";
+            sql = "select * from tbl_ClockIn where fld_lastName='Sekgota'  ORDER BY  fld_dateTime desc;";
 
 
             connection.Open();
@@ -287,7 +287,7 @@ namespace back
             List<string[]> classListSet = new List<string[]> { };
             string[] classListRow;
 
-            sql = "select * from tbl_ClockIn where fld_lastName='Hobyane';";
+            sql = "select * from tbl_ClockIn where fld_lastName='Hobyane'  ORDER BY  fld_dateTime desc;";
 
 
             connection.Open();
@@ -343,7 +343,7 @@ namespace back
             List<string[]> classListSet = new List<string[]> { };
             string[] classListRow;
 
-            sql = "select * from tbl_ClockIn where fld_lastName='Mzimkhulu';";
+            sql = "select * from tbl_ClockIn where fld_lastName='Mzimkhulu'  ORDER BY  fld_dateTime desc;";
 
 
             connection.Open();
@@ -399,7 +399,7 @@ namespace back
             List<string[]> classListSet = new List<string[]> { };
             string[] classListRow;
 
-            sql = "select * from tbl_ClockIn where fld_lastName='Masogo';";
+            sql = "select * from tbl_ClockIn where fld_lastName='Masogo'  ORDER BY  fld_dateTime desc;";
 
 
             connection.Open();
@@ -455,7 +455,7 @@ namespace back
             List<string[]> classListSet = new List<string[]> { };
             string[] classListRow;
 
-            sql = "select * from tbl_ClockIn where fld_lastName='Nyama';";
+            sql = "select * from tbl_ClockIn where fld_lastName='Nyama'  ORDER BY  fld_dateTime desc;";
 
 
             connection.Open();
@@ -511,7 +511,7 @@ namespace back
             List<string[]> classListSet = new List<string[]> { };
             string[] classListRow;
 
-            sql = "select * from tbl_ClockIn where fld_lastName='Zulu';";
+            sql = "select * from tbl_ClockIn where fld_lastName='Zulu'  ORDER BY  fld_dateTime desc;";
 
 
             connection.Open();
@@ -567,7 +567,7 @@ namespace back
             List<string[]> classListSet = new List<string[]> { };
             string[] classListRow;
 
-            sql = "select * from tbl_ClockIn where fld_lastName='Monyebodi';";
+            sql = "select * from tbl_ClockIn where fld_lastName='Monyebodi'  ORDER BY  fld_dateTime desc;";
 
 
             connection.Open();
@@ -623,7 +623,7 @@ namespace back
             List<string[]> classListSet = new List<string[]> { };
             string[] classListRow;
 
-            sql = "select * from tbl_ClockIn where fld_lastName='Khati';";
+            sql = "select * from tbl_ClockIn where fld_lastName='Khati'  ORDER BY  fld_dateTime desc;";
 
 
             connection.Open();
@@ -679,7 +679,7 @@ namespace back
             List<string[]> classListSet = new List<string[]> { };
             string[] classListRow;
 
-            sql = "select * from tbl_ClockIn where fld_lastName='Dube';";
+            sql = "select * from tbl_ClockIn where fld_lastName='Dube'  ORDER BY  fld_dateTime desc;";
 
 
             connection.Open();
@@ -735,7 +735,7 @@ namespace back
             List<string[]> classListSet = new List<string[]> { };
             string[] classListRow;
 
-            sql = "select * from tbl_ClockIn where fld_lastName='Ngobeni';";
+            sql = "select * from tbl_ClockIn where fld_lastName='Ngobeni'  ORDER BY  fld_dateTime desc;";
 
 
             connection.Open();
@@ -791,7 +791,7 @@ namespace back
             List<string[]> classListSet = new List<string[]> { };
             string[] classListRow;
 
-            sql = "select * from tbl_ClockIn where fld_lastName='Komane';";
+            sql = "select * from tbl_ClockIn where fld_lastName='Komane'  ORDER BY  fld_dateTime desc;";
 
 
             connection.Open();
@@ -847,7 +847,7 @@ namespace back
             List<string[]> classListSet = new List<string[]> { };
             string[] classListRow;
 
-            sql = "select * from tbl_ClockIn where fld_lastName='Matsitse';";
+            sql = "select * from tbl_ClockIn where fld_lastName='Matsitse'  ORDER BY  fld_dateTime desc;";
 
 
             connection.Open();
@@ -903,7 +903,7 @@ namespace back
             List<string[]> classListSet = new List<string[]> { };
             string[] classListRow;
 
-            sql = "select * from tbl_ClockIn where fld_lastName='Mogotsi';";
+            sql = "select * from tbl_ClockIn where fld_lastName='Mogotsi'  ORDER BY  fld_dateTime desc;";
 
 
             connection.Open();
@@ -959,7 +959,7 @@ namespace back
             List<string[]> classListSet = new List<string[]> { };
             string[] classListRow;
 
-            sql = "select * from tbl_ClockIn where fld_lastName='Ranga';";
+            sql = "select * from tbl_ClockIn where fld_lastName='Ranga'  ORDER BY  fld_dateTime desc;";
 
 
             connection.Open();
@@ -1015,7 +1015,7 @@ namespace back
             List<string[]> classListSet = new List<string[]> { };
             string[] classListRow;
 
-            sql = "select * from tbl_ClockIn where fld_lastName='Mukwena';";
+            sql = "select * from tbl_ClockIn where fld_lastName='Mukwena'  ORDER BY  fld_dateTime desc;";
 
 
             connection.Open();
@@ -1071,7 +1071,7 @@ namespace back
             List<string[]> classListSet = new List<string[]> { };
             string[] classListRow;
 
-            sql = "select * from tbl_ClockIn where fld_lastName='Ntlavana';";
+            sql = "select * from tbl_ClockIn where fld_lastName='Ntlavana'  ORDER BY  fld_dateTime desc;";
 
 
             connection.Open();
@@ -1127,7 +1127,7 @@ namespace back
             List<string[]> classListSet = new List<string[]> { };
             string[] classListRow;
 
-            sql = "select * from tbl_ClockIn where fld_lastName='Benge';";
+            sql = "select * from tbl_ClockIn where fld_lastName='Benge'  ORDER BY  fld_dateTime desc;";
 
 
             connection.Open();
@@ -1183,7 +1183,7 @@ namespace back
             List<string[]> classListSet = new List<string[]> { };
             string[] classListRow;
 
-            sql = "select * from tbl_ClockIn where fld_lastName='Hufke';";
+            sql = "select * from tbl_ClockIn where fld_lastName='Hufke'  ORDER BY  fld_dateTime desc;";
 
 
             connection.Open();
@@ -1239,7 +1239,7 @@ namespace back
             List<string[]> classListSet = new List<string[]> { };
             string[] classListRow;
 
-            sql = "select * from tbl_ClockIn where fld_lastName='Ross';";
+            sql = "select * from tbl_ClockIn where fld_lastName='Ross'  ORDER BY  fld_dateTime desc;";
 
 
             connection.Open();
@@ -1295,7 +1295,7 @@ namespace back
             List<string[]> classListSet = new List<string[]> { };
             string[] classListRow;
 
-            sql = "select * from tbl_ClockIn where fld_lastName='Solomons';";
+            sql = "select * from tbl_ClockIn where fld_lastName='Solomons'  ORDER BY  fld_dateTime desc;";
 
 
             connection.Open();
@@ -1351,7 +1351,7 @@ namespace back
             List<string[]> classListSet = new List<string[]> { };
             string[] classListRow;
 
-            sql = "select * from tbl_ClockIn where fld_lastName='Maseko';";
+            sql = "select * from tbl_ClockIn where fld_lastName='Maseko'  ORDER BY  fld_dateTime desc;";
 
 
             connection.Open();
@@ -1407,7 +1407,7 @@ namespace back
             List<string[]> classListSet = new List<string[]> { };
             string[] classListRow;
 
-            sql = "select * from tbl_ClockIn where fld_lastName='Mbekwa';";
+            sql = "select * from tbl_ClockIn where fld_lastName='Mbekwa'  ORDER BY  fld_dateTime desc;";
 
 
             connection.Open();
@@ -1463,7 +1463,7 @@ namespace back
             List<string[]> classListSet = new List<string[]> { };
             string[] classListRow;
 
-            sql = "select * from tbl_ClockIn where fld_lastName='Mpofu';";
+            sql = "select * from tbl_ClockIn where fld_lastName='Mpofu'  ORDER BY  fld_dateTime desc; ";
 
 
             connection.Open();
@@ -1519,7 +1519,7 @@ namespace back
             List<string[]> classListSet = new List<string[]> { };
             string[] classListRow;
 
-            sql = "select * from tbl_ClockIn where fld_lastName='Cebeni';";
+            sql = "select * from tbl_ClockIn where fld_lastName='Cebeni'  ORDER BY  fld_dateTime desc;";
 
 
             connection.Open();
