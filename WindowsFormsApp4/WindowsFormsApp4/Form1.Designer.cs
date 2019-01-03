@@ -30,11 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.dVchocDataSet = new WindowsFormsApp4.DVchocDataSet();
-            this.tblClockInBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tbl_ClockInTableAdapter = new WindowsFormsApp4.DVchocDataSetTableAdapters.tbl_ClockInTableAdapter();
             this.fldidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fldfirstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fldlastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,9 +45,15 @@
             this.fldlatitubeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fldlongitudeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.flddateTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tblClockInBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dVchocDataSet = new WindowsFormsApp4.DVchocDataSet();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tbl_ClockInTableAdapter = new WindowsFormsApp4.DVchocDataSetTableAdapters.tbl_ClockInTableAdapter();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dVchocDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblClockInBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dVchocDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -80,39 +81,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(776, 380);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(12, 415);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(173, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Make an excel file";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 13);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Clock In:";
-            // 
-            // dVchocDataSet
-            // 
-            this.dVchocDataSet.DataSetName = "DVchocDataSet";
-            this.dVchocDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tblClockInBindingSource
-            // 
-            this.tblClockInBindingSource.DataMember = "tbl_ClockIn";
-            this.tblClockInBindingSource.DataSource = this.dVchocDataSet;
-            // 
-            // tbl_ClockInTableAdapter
-            // 
-            this.tbl_ClockInTableAdapter.ClearBeforeFill = true;
             // 
             // fldidDataGridViewTextBoxColumn
             // 
@@ -205,11 +173,55 @@
             this.flddateTimeDataGridViewTextBoxColumn.HeaderText = "fld_dateTime";
             this.flddateTimeDataGridViewTextBoxColumn.Name = "flddateTimeDataGridViewTextBoxColumn";
             // 
+            // tblClockInBindingSource
+            // 
+            this.tblClockInBindingSource.DataMember = "tbl_ClockIn";
+            this.tblClockInBindingSource.DataSource = this.dVchocDataSet;
+            // 
+            // dVchocDataSet
+            // 
+            this.dVchocDataSet.DataSetName = "DVchocDataSet";
+            this.dVchocDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(12, 415);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(173, 23);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Make an excel file";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(13, 13);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(49, 13);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Clock In:";
+            // 
+            // tbl_ClockInTableAdapter
+            // 
+            this.tbl_ClockInTableAdapter.ClearBeforeFill = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(191, 415);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(158, 23);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "Make an missing employee excel file";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
@@ -217,8 +229,8 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dVchocDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblClockInBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dVchocDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -247,6 +259,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn fldlatitubeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn fldlongitudeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn flddateTimeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button button2;
     }
 }
 

@@ -23,7 +23,7 @@ namespace back
 
         public SQLConnect()
         {
-            connetionString = "Data Source=tcp:dv-server1234567.database.windows.net;Initial Catalog=DVchoc;Persist Security Info=True;User ID=andredev1234567;Password=Kooler1234567 Timeout=30;";
+            connetionString = "Server=tcp:dv-server1234567.database.windows.net,1433;Initial Catalog=DVchoc;Persist Security Info=False;User ID=andredev1234567;Password=Kooler1234567;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
             connection = new SqlConnection(connetionString);
         }
 
@@ -65,87 +65,1511 @@ namespace back
 
             sql = "select * from tbl_ClockIn;";
 
-            try
-            {
+            
                 connection.Open();
                 command = new SqlCommand(sql, connection);
                 dataReader = command.ExecuteReader();
 
-                while (dataReader.Read())
-                {
-                    classListRow = new string[15];
-
-                    //fld_id, fld_firstName, fld_lastName,fld_personalIDnumber, fld_deviceID, fld_latitube, fld_longitude, fld_dateTime
-                    //fld_id
-                    classListRow[0] = dataReader.GetValue(0).ToString();
-                    //fld_firstName
-                    classListRow[1] = dataReader.GetValue(1).ToString();
-                    //fld_lastName
-                    classListRow[2] = dataReader.GetValue(2).ToString();
-                    //fld_personalIDnumber
-                    classListRow[3] = dataReader.GetValue(3).ToString();
-                    //fld_deviceID
-                    classListRow[4] = dataReader.GetValue(4).ToString();
-                    //fld_latitube
-                    classListRow[5] = dataReader.GetValue(5).ToString();
-                    //fld_longitude
-                    classListRow[6] = dataReader.GetValue(6).ToString();
-                    //fld_dateTime
-                    classListRow[7] = dataReader.GetValue(7).ToString();
-                    //fld_dateTime
-                    classListRow[8] = dataReader.GetValue(8).ToString();
-                    //fld_dateTime
-                    classListRow[9] = dataReader.GetValue(9).ToString();
-                    //fld_dateTime
-                    classListRow[10] = dataReader.GetValue(10).ToString();
-                    //fld_dateTime
-                    classListRow[11] = dataReader.GetValue(11).ToString();
-                    //fld_dateTime
-                    classListRow[12] = dataReader.GetValue(12).ToString();
-                    //fld_dateTime
-                    classListRow[13] = dataReader.GetValue(13).ToString();
-                    //fld_dateTime
-                    classListRow[14] = dataReader.GetValue(14).ToString();
-
-
-                    classListSet.Add(classListRow);
-                }
-
-                dataReader.Close();
-                command.Dispose();
-                connection.Close();
-            }
-            catch (Exception NoResuslts)
+            while (dataReader.Read())
             {
-                //returns data no matter what happens, program still runs if connected or not
                 classListRow = new string[15];
-                classListRow[0] = "No Results Found";
-                //correctAnswers
-                classListRow[1] = "No Results Found";
-                //totalAnswers
-                classListRow[2] = "No Results Found";
-                classListRow[3] = "No Results Found";
-                classListRow[4] = "No Results Found";
-                classListRow[5] = "No Results Found";
-                classListRow[6] = "No Results Found";
-                classListRow[7] = "No Results Found";
-                classListRow[8] = "No Results Found";
-                classListRow[9] = "No Results Found";
-                classListRow[10] = "No Results Found";
-                classListRow[11] = "No Results Found";
-                classListRow[12] = "No Results Found";
-                classListRow[13] = "No Results Found";
-                classListRow[14] = "No Results Found";
 
+                //fld_id, fld_firstName, fld_lastName,fld_personalIDnumber, fld_deviceID, fld_latitube, fld_longitude, fld_dateTime
+                //fld_id
+                classListRow[0] = dataReader.GetValue(0).ToString();
+                //fld_firstName
+                classListRow[1] = dataReader.GetValue(1).ToString();
+                //fld_lastName
+                classListRow[2] = dataReader.GetValue(2).ToString();
+                //fld_personalIDnumber
+                classListRow[3] = dataReader.GetValue(3).ToString();
+                //fld_deviceID
+                classListRow[4] = dataReader.GetValue(4).ToString();
+                //fld_latitube
+                classListRow[5] = dataReader.GetValue(5).ToString();
+                //fld_longitude
+                classListRow[6] = dataReader.GetValue(6).ToString();
+                //fld_dateTime
+                classListRow[7] = dataReader.GetValue(7).ToString();
+                //fld_dateTime
+                classListRow[8] = dataReader.GetValue(8).ToString();
+                //fld_dateTime
+                classListRow[9] = dataReader.GetValue(9).ToString();
+                //fld_dateTime
+                classListRow[10] = dataReader.GetValue(10).ToString();
+                //fld_dateTime
+                classListRow[11] = dataReader.GetValue(11).ToString();
+                //fld_dateTime
+                classListRow[12] = dataReader.GetValue(12).ToString();
+                //fld_dateTime
+                classListRow[13] = dataReader.GetValue(13).ToString();
+                //fld_dateTime
+                classListRow[14] = dataReader.GetValue(14).ToString();
 
 
                 classListSet.Add(classListRow);
-                Console.WriteLine("No result");
-                Console.WriteLine("No result");
             }
+            
+
             return classListSet;
         }
 
+        public List<string[]> GetMbhathaList()
+        {
+            List<string[]> classListSet = new List<string[]> { };
+            string[] classListRow;
+
+            sql = "select * from tbl_ClockIn where fld_lastName='Mbhatha';";
+
+
+            connection.Open();
+            command = new SqlCommand(sql, connection);
+            dataReader = command.ExecuteReader();
+
+            while (dataReader.Read())
+            {
+                classListRow = new string[15];
+
+                //fld_id, fld_firstName, fld_lastName,fld_personalIDnumber, fld_deviceID, fld_latitube, fld_longitude, fld_dateTime
+                //fld_id
+                classListRow[0] = dataReader.GetValue(0).ToString();
+                //fld_firstName
+                classListRow[1] = dataReader.GetValue(1).ToString();
+                //fld_lastName
+                classListRow[2] = dataReader.GetValue(2).ToString();
+                //fld_personalIDnumber
+                classListRow[3] = dataReader.GetValue(3).ToString();
+                //fld_deviceID
+                classListRow[4] = dataReader.GetValue(4).ToString();
+                //fld_latitube
+                classListRow[5] = dataReader.GetValue(5).ToString();
+                //fld_longitude
+                classListRow[6] = dataReader.GetValue(6).ToString();
+                //fld_dateTime
+                classListRow[7] = dataReader.GetValue(7).ToString();
+                //fld_dateTime
+                classListRow[8] = dataReader.GetValue(8).ToString();
+                //fld_dateTime
+                classListRow[9] = dataReader.GetValue(9).ToString();
+                //fld_dateTime
+                classListRow[10] = dataReader.GetValue(10).ToString();
+                //fld_dateTime
+                classListRow[11] = dataReader.GetValue(11).ToString();
+                //fld_dateTime
+                classListRow[12] = dataReader.GetValue(12).ToString();
+                //fld_dateTime
+                classListRow[13] = dataReader.GetValue(13).ToString();
+                //fld_dateTime
+                classListRow[14] = dataReader.GetValue(14).ToString();
+
+
+                classListSet.Add(classListRow);
+            }
+
+
+            return classListSet;
+        }
+
+        public List<string[]> GetMufamadiList()
+        {
+            List<string[]> classListSet = new List<string[]> { };
+            string[] classListRow;
+
+            sql = "select * from tbl_ClockIn where fld_lastName='Mufamadi';";
+
+
+            connection.Open();
+            command = new SqlCommand(sql, connection);
+            dataReader = command.ExecuteReader();
+
+            while (dataReader.Read())
+            {
+                classListRow = new string[15];
+
+                //fld_id, fld_firstName, fld_lastName,fld_personalIDnumber, fld_deviceID, fld_latitube, fld_longitude, fld_dateTime
+                //fld_id
+                classListRow[0] = dataReader.GetValue(0).ToString();
+                //fld_firstName
+                classListRow[1] = dataReader.GetValue(1).ToString();
+                //fld_lastName
+                classListRow[2] = dataReader.GetValue(2).ToString();
+                //fld_personalIDnumber
+                classListRow[3] = dataReader.GetValue(3).ToString();
+                //fld_deviceID
+                classListRow[4] = dataReader.GetValue(4).ToString();
+                //fld_latitube
+                classListRow[5] = dataReader.GetValue(5).ToString();
+                //fld_longitude
+                classListRow[6] = dataReader.GetValue(6).ToString();
+                //fld_dateTime
+                classListRow[7] = dataReader.GetValue(7).ToString();
+                //fld_dateTime
+                classListRow[8] = dataReader.GetValue(8).ToString();
+                //fld_dateTime
+                classListRow[9] = dataReader.GetValue(9).ToString();
+                //fld_dateTime
+                classListRow[10] = dataReader.GetValue(10).ToString();
+                //fld_dateTime
+                classListRow[11] = dataReader.GetValue(11).ToString();
+                //fld_dateTime
+                classListRow[12] = dataReader.GetValue(12).ToString();
+                //fld_dateTime
+                classListRow[13] = dataReader.GetValue(13).ToString();
+                //fld_dateTime
+                classListRow[14] = dataReader.GetValue(14).ToString();
+
+
+                classListSet.Add(classListRow);
+            }
+
+
+            return classListSet;
+        }
+
+        public List<string[]> GetSekgotaList()
+        {
+            List<string[]> classListSet = new List<string[]> { };
+            string[] classListRow;
+
+            sql = "select * from tbl_ClockIn where fld_lastName='Sekgota';";
+
+
+            connection.Open();
+            command = new SqlCommand(sql, connection);
+            dataReader = command.ExecuteReader();
+
+            while (dataReader.Read())
+            {
+                classListRow = new string[15];
+
+                //fld_id, fld_firstName, fld_lastName,fld_personalIDnumber, fld_deviceID, fld_latitube, fld_longitude, fld_dateTime
+                //fld_id
+                classListRow[0] = dataReader.GetValue(0).ToString();
+                //fld_firstName
+                classListRow[1] = dataReader.GetValue(1).ToString();
+                //fld_lastName
+                classListRow[2] = dataReader.GetValue(2).ToString();
+                //fld_personalIDnumber
+                classListRow[3] = dataReader.GetValue(3).ToString();
+                //fld_deviceID
+                classListRow[4] = dataReader.GetValue(4).ToString();
+                //fld_latitube
+                classListRow[5] = dataReader.GetValue(5).ToString();
+                //fld_longitude
+                classListRow[6] = dataReader.GetValue(6).ToString();
+                //fld_dateTime
+                classListRow[7] = dataReader.GetValue(7).ToString();
+                //fld_dateTime
+                classListRow[8] = dataReader.GetValue(8).ToString();
+                //fld_dateTime
+                classListRow[9] = dataReader.GetValue(9).ToString();
+                //fld_dateTime
+                classListRow[10] = dataReader.GetValue(10).ToString();
+                //fld_dateTime
+                classListRow[11] = dataReader.GetValue(11).ToString();
+                //fld_dateTime
+                classListRow[12] = dataReader.GetValue(12).ToString();
+                //fld_dateTime
+                classListRow[13] = dataReader.GetValue(13).ToString();
+                //fld_dateTime
+                classListRow[14] = dataReader.GetValue(14).ToString();
+
+
+                classListSet.Add(classListRow);
+            }
+
+
+            return classListSet;
+        }
+
+        public List<string[]> GetHobyaneList()
+        {
+            List<string[]> classListSet = new List<string[]> { };
+            string[] classListRow;
+
+            sql = "select * from tbl_ClockIn where fld_lastName='Hobyane';";
+
+
+            connection.Open();
+            command = new SqlCommand(sql, connection);
+            dataReader = command.ExecuteReader();
+
+            while (dataReader.Read())
+            {
+                classListRow = new string[15];
+
+                //fld_id, fld_firstName, fld_lastName,fld_personalIDnumber, fld_deviceID, fld_latitube, fld_longitude, fld_dateTime
+                //fld_id
+                classListRow[0] = dataReader.GetValue(0).ToString();
+                //fld_firstName
+                classListRow[1] = dataReader.GetValue(1).ToString();
+                //fld_lastName
+                classListRow[2] = dataReader.GetValue(2).ToString();
+                //fld_personalIDnumber
+                classListRow[3] = dataReader.GetValue(3).ToString();
+                //fld_deviceID
+                classListRow[4] = dataReader.GetValue(4).ToString();
+                //fld_latitube
+                classListRow[5] = dataReader.GetValue(5).ToString();
+                //fld_longitude
+                classListRow[6] = dataReader.GetValue(6).ToString();
+                //fld_dateTime
+                classListRow[7] = dataReader.GetValue(7).ToString();
+                //fld_dateTime
+                classListRow[8] = dataReader.GetValue(8).ToString();
+                //fld_dateTime
+                classListRow[9] = dataReader.GetValue(9).ToString();
+                //fld_dateTime
+                classListRow[10] = dataReader.GetValue(10).ToString();
+                //fld_dateTime
+                classListRow[11] = dataReader.GetValue(11).ToString();
+                //fld_dateTime
+                classListRow[12] = dataReader.GetValue(12).ToString();
+                //fld_dateTime
+                classListRow[13] = dataReader.GetValue(13).ToString();
+                //fld_dateTime
+                classListRow[14] = dataReader.GetValue(14).ToString();
+
+
+                classListSet.Add(classListRow);
+            }
+
+
+            return classListSet;
+        }
+
+        public List<string[]> GetMzimkhuluList()
+        {
+            List<string[]> classListSet = new List<string[]> { };
+            string[] classListRow;
+
+            sql = "select * from tbl_ClockIn where fld_lastName='Mzimkhulu';";
+
+
+            connection.Open();
+            command = new SqlCommand(sql, connection);
+            dataReader = command.ExecuteReader();
+
+            while (dataReader.Read())
+            {
+                classListRow = new string[15];
+
+                //fld_id, fld_firstName, fld_lastName,fld_personalIDnumber, fld_deviceID, fld_latitube, fld_longitude, fld_dateTime
+                //fld_id
+                classListRow[0] = dataReader.GetValue(0).ToString();
+                //fld_firstName
+                classListRow[1] = dataReader.GetValue(1).ToString();
+                //fld_lastName
+                classListRow[2] = dataReader.GetValue(2).ToString();
+                //fld_personalIDnumber
+                classListRow[3] = dataReader.GetValue(3).ToString();
+                //fld_deviceID
+                classListRow[4] = dataReader.GetValue(4).ToString();
+                //fld_latitube
+                classListRow[5] = dataReader.GetValue(5).ToString();
+                //fld_longitude
+                classListRow[6] = dataReader.GetValue(6).ToString();
+                //fld_dateTime
+                classListRow[7] = dataReader.GetValue(7).ToString();
+                //fld_dateTime
+                classListRow[8] = dataReader.GetValue(8).ToString();
+                //fld_dateTime
+                classListRow[9] = dataReader.GetValue(9).ToString();
+                //fld_dateTime
+                classListRow[10] = dataReader.GetValue(10).ToString();
+                //fld_dateTime
+                classListRow[11] = dataReader.GetValue(11).ToString();
+                //fld_dateTime
+                classListRow[12] = dataReader.GetValue(12).ToString();
+                //fld_dateTime
+                classListRow[13] = dataReader.GetValue(13).ToString();
+                //fld_dateTime
+                classListRow[14] = dataReader.GetValue(14).ToString();
+
+
+                classListSet.Add(classListRow);
+            }
+
+
+            return classListSet;
+        }
+
+        public List<string[]> GetMasogoList()
+        {
+            List<string[]> classListSet = new List<string[]> { };
+            string[] classListRow;
+
+            sql = "select * from tbl_ClockIn where fld_lastName='Masogo';";
+
+
+            connection.Open();
+            command = new SqlCommand(sql, connection);
+            dataReader = command.ExecuteReader();
+
+            while (dataReader.Read())
+            {
+                classListRow = new string[15];
+
+                //fld_id, fld_firstName, fld_lastName,fld_personalIDnumber, fld_deviceID, fld_latitube, fld_longitude, fld_dateTime
+                //fld_id
+                classListRow[0] = dataReader.GetValue(0).ToString();
+                //fld_firstName
+                classListRow[1] = dataReader.GetValue(1).ToString();
+                //fld_lastName
+                classListRow[2] = dataReader.GetValue(2).ToString();
+                //fld_personalIDnumber
+                classListRow[3] = dataReader.GetValue(3).ToString();
+                //fld_deviceID
+                classListRow[4] = dataReader.GetValue(4).ToString();
+                //fld_latitube
+                classListRow[5] = dataReader.GetValue(5).ToString();
+                //fld_longitude
+                classListRow[6] = dataReader.GetValue(6).ToString();
+                //fld_dateTime
+                classListRow[7] = dataReader.GetValue(7).ToString();
+                //fld_dateTime
+                classListRow[8] = dataReader.GetValue(8).ToString();
+                //fld_dateTime
+                classListRow[9] = dataReader.GetValue(9).ToString();
+                //fld_dateTime
+                classListRow[10] = dataReader.GetValue(10).ToString();
+                //fld_dateTime
+                classListRow[11] = dataReader.GetValue(11).ToString();
+                //fld_dateTime
+                classListRow[12] = dataReader.GetValue(12).ToString();
+                //fld_dateTime
+                classListRow[13] = dataReader.GetValue(13).ToString();
+                //fld_dateTime
+                classListRow[14] = dataReader.GetValue(14).ToString();
+
+
+                classListSet.Add(classListRow);
+            }
+
+
+            return classListSet;
+        }
+
+        public List<string[]> GetNyamaList()
+        {
+            List<string[]> classListSet = new List<string[]> { };
+            string[] classListRow;
+
+            sql = "select * from tbl_ClockIn where fld_lastName='Nyama';";
+
+
+            connection.Open();
+            command = new SqlCommand(sql, connection);
+            dataReader = command.ExecuteReader();
+
+            while (dataReader.Read())
+            {
+                classListRow = new string[15];
+
+                //fld_id, fld_firstName, fld_lastName,fld_personalIDnumber, fld_deviceID, fld_latitube, fld_longitude, fld_dateTime
+                //fld_id
+                classListRow[0] = dataReader.GetValue(0).ToString();
+                //fld_firstName
+                classListRow[1] = dataReader.GetValue(1).ToString();
+                //fld_lastName
+                classListRow[2] = dataReader.GetValue(2).ToString();
+                //fld_personalIDnumber
+                classListRow[3] = dataReader.GetValue(3).ToString();
+                //fld_deviceID
+                classListRow[4] = dataReader.GetValue(4).ToString();
+                //fld_latitube
+                classListRow[5] = dataReader.GetValue(5).ToString();
+                //fld_longitude
+                classListRow[6] = dataReader.GetValue(6).ToString();
+                //fld_dateTime
+                classListRow[7] = dataReader.GetValue(7).ToString();
+                //fld_dateTime
+                classListRow[8] = dataReader.GetValue(8).ToString();
+                //fld_dateTime
+                classListRow[9] = dataReader.GetValue(9).ToString();
+                //fld_dateTime
+                classListRow[10] = dataReader.GetValue(10).ToString();
+                //fld_dateTime
+                classListRow[11] = dataReader.GetValue(11).ToString();
+                //fld_dateTime
+                classListRow[12] = dataReader.GetValue(12).ToString();
+                //fld_dateTime
+                classListRow[13] = dataReader.GetValue(13).ToString();
+                //fld_dateTime
+                classListRow[14] = dataReader.GetValue(14).ToString();
+
+
+                classListSet.Add(classListRow);
+            }
+
+
+            return classListSet;
+        }
+
+        public List<string[]> GetZuluList()
+        {
+            List<string[]> classListSet = new List<string[]> { };
+            string[] classListRow;
+
+            sql = "select * from tbl_ClockIn where fld_lastName='Zulu';";
+
+
+            connection.Open();
+            command = new SqlCommand(sql, connection);
+            dataReader = command.ExecuteReader();
+
+            while (dataReader.Read())
+            {
+                classListRow = new string[15];
+
+                //fld_id, fld_firstName, fld_lastName,fld_personalIDnumber, fld_deviceID, fld_latitube, fld_longitude, fld_dateTime
+                //fld_id
+                classListRow[0] = dataReader.GetValue(0).ToString();
+                //fld_firstName
+                classListRow[1] = dataReader.GetValue(1).ToString();
+                //fld_lastName
+                classListRow[2] = dataReader.GetValue(2).ToString();
+                //fld_personalIDnumber
+                classListRow[3] = dataReader.GetValue(3).ToString();
+                //fld_deviceID
+                classListRow[4] = dataReader.GetValue(4).ToString();
+                //fld_latitube
+                classListRow[5] = dataReader.GetValue(5).ToString();
+                //fld_longitude
+                classListRow[6] = dataReader.GetValue(6).ToString();
+                //fld_dateTime
+                classListRow[7] = dataReader.GetValue(7).ToString();
+                //fld_dateTime
+                classListRow[8] = dataReader.GetValue(8).ToString();
+                //fld_dateTime
+                classListRow[9] = dataReader.GetValue(9).ToString();
+                //fld_dateTime
+                classListRow[10] = dataReader.GetValue(10).ToString();
+                //fld_dateTime
+                classListRow[11] = dataReader.GetValue(11).ToString();
+                //fld_dateTime
+                classListRow[12] = dataReader.GetValue(12).ToString();
+                //fld_dateTime
+                classListRow[13] = dataReader.GetValue(13).ToString();
+                //fld_dateTime
+                classListRow[14] = dataReader.GetValue(14).ToString();
+
+
+                classListSet.Add(classListRow);
+            }
+
+
+            return classListSet;
+        }
+
+        public List<string[]> GetMonyebodiList()
+        {
+            List<string[]> classListSet = new List<string[]> { };
+            string[] classListRow;
+
+            sql = "select * from tbl_ClockIn where fld_lastName='Monyebodi';";
+
+
+            connection.Open();
+            command = new SqlCommand(sql, connection);
+            dataReader = command.ExecuteReader();
+
+            while (dataReader.Read())
+            {
+                classListRow = new string[15];
+
+                //fld_id, fld_firstName, fld_lastName,fld_personalIDnumber, fld_deviceID, fld_latitube, fld_longitude, fld_dateTime
+                //fld_id
+                classListRow[0] = dataReader.GetValue(0).ToString();
+                //fld_firstName
+                classListRow[1] = dataReader.GetValue(1).ToString();
+                //fld_lastName
+                classListRow[2] = dataReader.GetValue(2).ToString();
+                //fld_personalIDnumber
+                classListRow[3] = dataReader.GetValue(3).ToString();
+                //fld_deviceID
+                classListRow[4] = dataReader.GetValue(4).ToString();
+                //fld_latitube
+                classListRow[5] = dataReader.GetValue(5).ToString();
+                //fld_longitude
+                classListRow[6] = dataReader.GetValue(6).ToString();
+                //fld_dateTime
+                classListRow[7] = dataReader.GetValue(7).ToString();
+                //fld_dateTime
+                classListRow[8] = dataReader.GetValue(8).ToString();
+                //fld_dateTime
+                classListRow[9] = dataReader.GetValue(9).ToString();
+                //fld_dateTime
+                classListRow[10] = dataReader.GetValue(10).ToString();
+                //fld_dateTime
+                classListRow[11] = dataReader.GetValue(11).ToString();
+                //fld_dateTime
+                classListRow[12] = dataReader.GetValue(12).ToString();
+                //fld_dateTime
+                classListRow[13] = dataReader.GetValue(13).ToString();
+                //fld_dateTime
+                classListRow[14] = dataReader.GetValue(14).ToString();
+
+
+                classListSet.Add(classListRow);
+            }
+
+
+            return classListSet;
+        }
+
+        public List<string[]> GetKhatiList()
+        {
+            List<string[]> classListSet = new List<string[]> { };
+            string[] classListRow;
+
+            sql = "select * from tbl_ClockIn where fld_lastName='Khati';";
+
+
+            connection.Open();
+            command = new SqlCommand(sql, connection);
+            dataReader = command.ExecuteReader();
+
+            while (dataReader.Read())
+            {
+                classListRow = new string[15];
+
+                //fld_id, fld_firstName, fld_lastName,fld_personalIDnumber, fld_deviceID, fld_latitube, fld_longitude, fld_dateTime
+                //fld_id
+                classListRow[0] = dataReader.GetValue(0).ToString();
+                //fld_firstName
+                classListRow[1] = dataReader.GetValue(1).ToString();
+                //fld_lastName
+                classListRow[2] = dataReader.GetValue(2).ToString();
+                //fld_personalIDnumber
+                classListRow[3] = dataReader.GetValue(3).ToString();
+                //fld_deviceID
+                classListRow[4] = dataReader.GetValue(4).ToString();
+                //fld_latitube
+                classListRow[5] = dataReader.GetValue(5).ToString();
+                //fld_longitude
+                classListRow[6] = dataReader.GetValue(6).ToString();
+                //fld_dateTime
+                classListRow[7] = dataReader.GetValue(7).ToString();
+                //fld_dateTime
+                classListRow[8] = dataReader.GetValue(8).ToString();
+                //fld_dateTime
+                classListRow[9] = dataReader.GetValue(9).ToString();
+                //fld_dateTime
+                classListRow[10] = dataReader.GetValue(10).ToString();
+                //fld_dateTime
+                classListRow[11] = dataReader.GetValue(11).ToString();
+                //fld_dateTime
+                classListRow[12] = dataReader.GetValue(12).ToString();
+                //fld_dateTime
+                classListRow[13] = dataReader.GetValue(13).ToString();
+                //fld_dateTime
+                classListRow[14] = dataReader.GetValue(14).ToString();
+
+
+                classListSet.Add(classListRow);
+            }
+
+
+            return classListSet;
+        }
+
+        public List<string[]> GetDubeList()
+        {
+            List<string[]> classListSet = new List<string[]> { };
+            string[] classListRow;
+
+            sql = "select * from tbl_ClockIn where fld_lastName='Dube';";
+
+
+            connection.Open();
+            command = new SqlCommand(sql, connection);
+            dataReader = command.ExecuteReader();
+
+            while (dataReader.Read())
+            {
+                classListRow = new string[15];
+
+                //fld_id, fld_firstName, fld_lastName,fld_personalIDnumber, fld_deviceID, fld_latitube, fld_longitude, fld_dateTime
+                //fld_id
+                classListRow[0] = dataReader.GetValue(0).ToString();
+                //fld_firstName
+                classListRow[1] = dataReader.GetValue(1).ToString();
+                //fld_lastName
+                classListRow[2] = dataReader.GetValue(2).ToString();
+                //fld_personalIDnumber
+                classListRow[3] = dataReader.GetValue(3).ToString();
+                //fld_deviceID
+                classListRow[4] = dataReader.GetValue(4).ToString();
+                //fld_latitube
+                classListRow[5] = dataReader.GetValue(5).ToString();
+                //fld_longitude
+                classListRow[6] = dataReader.GetValue(6).ToString();
+                //fld_dateTime
+                classListRow[7] = dataReader.GetValue(7).ToString();
+                //fld_dateTime
+                classListRow[8] = dataReader.GetValue(8).ToString();
+                //fld_dateTime
+                classListRow[9] = dataReader.GetValue(9).ToString();
+                //fld_dateTime
+                classListRow[10] = dataReader.GetValue(10).ToString();
+                //fld_dateTime
+                classListRow[11] = dataReader.GetValue(11).ToString();
+                //fld_dateTime
+                classListRow[12] = dataReader.GetValue(12).ToString();
+                //fld_dateTime
+                classListRow[13] = dataReader.GetValue(13).ToString();
+                //fld_dateTime
+                classListRow[14] = dataReader.GetValue(14).ToString();
+
+
+                classListSet.Add(classListRow);
+            }
+
+
+            return classListSet;
+        }
+
+        public List<string[]> GetNgobeniList()
+        {
+            List<string[]> classListSet = new List<string[]> { };
+            string[] classListRow;
+
+            sql = "select * from tbl_ClockIn where fld_lastName='Ngobeni';";
+
+
+            connection.Open();
+            command = new SqlCommand(sql, connection);
+            dataReader = command.ExecuteReader();
+
+            while (dataReader.Read())
+            {
+                classListRow = new string[15];
+
+                //fld_id, fld_firstName, fld_lastName,fld_personalIDnumber, fld_deviceID, fld_latitube, fld_longitude, fld_dateTime
+                //fld_id
+                classListRow[0] = dataReader.GetValue(0).ToString();
+                //fld_firstName
+                classListRow[1] = dataReader.GetValue(1).ToString();
+                //fld_lastName
+                classListRow[2] = dataReader.GetValue(2).ToString();
+                //fld_personalIDnumber
+                classListRow[3] = dataReader.GetValue(3).ToString();
+                //fld_deviceID
+                classListRow[4] = dataReader.GetValue(4).ToString();
+                //fld_latitube
+                classListRow[5] = dataReader.GetValue(5).ToString();
+                //fld_longitude
+                classListRow[6] = dataReader.GetValue(6).ToString();
+                //fld_dateTime
+                classListRow[7] = dataReader.GetValue(7).ToString();
+                //fld_dateTime
+                classListRow[8] = dataReader.GetValue(8).ToString();
+                //fld_dateTime
+                classListRow[9] = dataReader.GetValue(9).ToString();
+                //fld_dateTime
+                classListRow[10] = dataReader.GetValue(10).ToString();
+                //fld_dateTime
+                classListRow[11] = dataReader.GetValue(11).ToString();
+                //fld_dateTime
+                classListRow[12] = dataReader.GetValue(12).ToString();
+                //fld_dateTime
+                classListRow[13] = dataReader.GetValue(13).ToString();
+                //fld_dateTime
+                classListRow[14] = dataReader.GetValue(14).ToString();
+
+
+                classListSet.Add(classListRow);
+            }
+
+
+            return classListSet;
+        }
+
+        public List<string[]> GetKomaneList()
+        {
+            List<string[]> classListSet = new List<string[]> { };
+            string[] classListRow;
+
+            sql = "select * from tbl_ClockIn where fld_lastName='Komane';";
+
+
+            connection.Open();
+            command = new SqlCommand(sql, connection);
+            dataReader = command.ExecuteReader();
+
+            while (dataReader.Read())
+            {
+                classListRow = new string[15];
+
+                //fld_id, fld_firstName, fld_lastName,fld_personalIDnumber, fld_deviceID, fld_latitube, fld_longitude, fld_dateTime
+                //fld_id
+                classListRow[0] = dataReader.GetValue(0).ToString();
+                //fld_firstName
+                classListRow[1] = dataReader.GetValue(1).ToString();
+                //fld_lastName
+                classListRow[2] = dataReader.GetValue(2).ToString();
+                //fld_personalIDnumber
+                classListRow[3] = dataReader.GetValue(3).ToString();
+                //fld_deviceID
+                classListRow[4] = dataReader.GetValue(4).ToString();
+                //fld_latitube
+                classListRow[5] = dataReader.GetValue(5).ToString();
+                //fld_longitude
+                classListRow[6] = dataReader.GetValue(6).ToString();
+                //fld_dateTime
+                classListRow[7] = dataReader.GetValue(7).ToString();
+                //fld_dateTime
+                classListRow[8] = dataReader.GetValue(8).ToString();
+                //fld_dateTime
+                classListRow[9] = dataReader.GetValue(9).ToString();
+                //fld_dateTime
+                classListRow[10] = dataReader.GetValue(10).ToString();
+                //fld_dateTime
+                classListRow[11] = dataReader.GetValue(11).ToString();
+                //fld_dateTime
+                classListRow[12] = dataReader.GetValue(12).ToString();
+                //fld_dateTime
+                classListRow[13] = dataReader.GetValue(13).ToString();
+                //fld_dateTime
+                classListRow[14] = dataReader.GetValue(14).ToString();
+
+
+                classListSet.Add(classListRow);
+            }
+
+
+            return classListSet;
+        }
+
+        public List<string[]> GetMatsitseList()
+        {
+            List<string[]> classListSet = new List<string[]> { };
+            string[] classListRow;
+
+            sql = "select * from tbl_ClockIn where fld_lastName='Matsitse';";
+
+
+            connection.Open();
+            command = new SqlCommand(sql, connection);
+            dataReader = command.ExecuteReader();
+
+            while (dataReader.Read())
+            {
+                classListRow = new string[15];
+
+                //fld_id, fld_firstName, fld_lastName,fld_personalIDnumber, fld_deviceID, fld_latitube, fld_longitude, fld_dateTime
+                //fld_id
+                classListRow[0] = dataReader.GetValue(0).ToString();
+                //fld_firstName
+                classListRow[1] = dataReader.GetValue(1).ToString();
+                //fld_lastName
+                classListRow[2] = dataReader.GetValue(2).ToString();
+                //fld_personalIDnumber
+                classListRow[3] = dataReader.GetValue(3).ToString();
+                //fld_deviceID
+                classListRow[4] = dataReader.GetValue(4).ToString();
+                //fld_latitube
+                classListRow[5] = dataReader.GetValue(5).ToString();
+                //fld_longitude
+                classListRow[6] = dataReader.GetValue(6).ToString();
+                //fld_dateTime
+                classListRow[7] = dataReader.GetValue(7).ToString();
+                //fld_dateTime
+                classListRow[8] = dataReader.GetValue(8).ToString();
+                //fld_dateTime
+                classListRow[9] = dataReader.GetValue(9).ToString();
+                //fld_dateTime
+                classListRow[10] = dataReader.GetValue(10).ToString();
+                //fld_dateTime
+                classListRow[11] = dataReader.GetValue(11).ToString();
+                //fld_dateTime
+                classListRow[12] = dataReader.GetValue(12).ToString();
+                //fld_dateTime
+                classListRow[13] = dataReader.GetValue(13).ToString();
+                //fld_dateTime
+                classListRow[14] = dataReader.GetValue(14).ToString();
+
+
+                classListSet.Add(classListRow);
+            }
+
+
+            return classListSet;
+        }
+
+        public List<string[]> GetMogotsiList()
+        {
+            List<string[]> classListSet = new List<string[]> { };
+            string[] classListRow;
+
+            sql = "select * from tbl_ClockIn where fld_lastName='Mogotsi';";
+
+
+            connection.Open();
+            command = new SqlCommand(sql, connection);
+            dataReader = command.ExecuteReader();
+
+            while (dataReader.Read())
+            {
+                classListRow = new string[15];
+
+                //fld_id, fld_firstName, fld_lastName,fld_personalIDnumber, fld_deviceID, fld_latitube, fld_longitude, fld_dateTime
+                //fld_id
+                classListRow[0] = dataReader.GetValue(0).ToString();
+                //fld_firstName
+                classListRow[1] = dataReader.GetValue(1).ToString();
+                //fld_lastName
+                classListRow[2] = dataReader.GetValue(2).ToString();
+                //fld_personalIDnumber
+                classListRow[3] = dataReader.GetValue(3).ToString();
+                //fld_deviceID
+                classListRow[4] = dataReader.GetValue(4).ToString();
+                //fld_latitube
+                classListRow[5] = dataReader.GetValue(5).ToString();
+                //fld_longitude
+                classListRow[6] = dataReader.GetValue(6).ToString();
+                //fld_dateTime
+                classListRow[7] = dataReader.GetValue(7).ToString();
+                //fld_dateTime
+                classListRow[8] = dataReader.GetValue(8).ToString();
+                //fld_dateTime
+                classListRow[9] = dataReader.GetValue(9).ToString();
+                //fld_dateTime
+                classListRow[10] = dataReader.GetValue(10).ToString();
+                //fld_dateTime
+                classListRow[11] = dataReader.GetValue(11).ToString();
+                //fld_dateTime
+                classListRow[12] = dataReader.GetValue(12).ToString();
+                //fld_dateTime
+                classListRow[13] = dataReader.GetValue(13).ToString();
+                //fld_dateTime
+                classListRow[14] = dataReader.GetValue(14).ToString();
+
+
+                classListSet.Add(classListRow);
+            }
+
+
+            return classListSet;
+        }
+
+        public List<string[]> GetRangaList()
+        {
+            List<string[]> classListSet = new List<string[]> { };
+            string[] classListRow;
+
+            sql = "select * from tbl_ClockIn where fld_lastName='Ranga';";
+
+
+            connection.Open();
+            command = new SqlCommand(sql, connection);
+            dataReader = command.ExecuteReader();
+
+            while (dataReader.Read())
+            {
+                classListRow = new string[15];
+
+                //fld_id, fld_firstName, fld_lastName,fld_personalIDnumber, fld_deviceID, fld_latitube, fld_longitude, fld_dateTime
+                //fld_id
+                classListRow[0] = dataReader.GetValue(0).ToString();
+                //fld_firstName
+                classListRow[1] = dataReader.GetValue(1).ToString();
+                //fld_lastName
+                classListRow[2] = dataReader.GetValue(2).ToString();
+                //fld_personalIDnumber
+                classListRow[3] = dataReader.GetValue(3).ToString();
+                //fld_deviceID
+                classListRow[4] = dataReader.GetValue(4).ToString();
+                //fld_latitube
+                classListRow[5] = dataReader.GetValue(5).ToString();
+                //fld_longitude
+                classListRow[6] = dataReader.GetValue(6).ToString();
+                //fld_dateTime
+                classListRow[7] = dataReader.GetValue(7).ToString();
+                //fld_dateTime
+                classListRow[8] = dataReader.GetValue(8).ToString();
+                //fld_dateTime
+                classListRow[9] = dataReader.GetValue(9).ToString();
+                //fld_dateTime
+                classListRow[10] = dataReader.GetValue(10).ToString();
+                //fld_dateTime
+                classListRow[11] = dataReader.GetValue(11).ToString();
+                //fld_dateTime
+                classListRow[12] = dataReader.GetValue(12).ToString();
+                //fld_dateTime
+                classListRow[13] = dataReader.GetValue(13).ToString();
+                //fld_dateTime
+                classListRow[14] = dataReader.GetValue(14).ToString();
+
+
+                classListSet.Add(classListRow);
+            }
+
+
+            return classListSet;
+        }
+
+        public List<string[]> GetMukwenaList()
+        {
+            List<string[]> classListSet = new List<string[]> { };
+            string[] classListRow;
+
+            sql = "select * from tbl_ClockIn where fld_lastName='Mukwena';";
+
+
+            connection.Open();
+            command = new SqlCommand(sql, connection);
+            dataReader = command.ExecuteReader();
+
+            while (dataReader.Read())
+            {
+                classListRow = new string[15];
+
+                //fld_id, fld_firstName, fld_lastName,fld_personalIDnumber, fld_deviceID, fld_latitube, fld_longitude, fld_dateTime
+                //fld_id
+                classListRow[0] = dataReader.GetValue(0).ToString();
+                //fld_firstName
+                classListRow[1] = dataReader.GetValue(1).ToString();
+                //fld_lastName
+                classListRow[2] = dataReader.GetValue(2).ToString();
+                //fld_personalIDnumber
+                classListRow[3] = dataReader.GetValue(3).ToString();
+                //fld_deviceID
+                classListRow[4] = dataReader.GetValue(4).ToString();
+                //fld_latitube
+                classListRow[5] = dataReader.GetValue(5).ToString();
+                //fld_longitude
+                classListRow[6] = dataReader.GetValue(6).ToString();
+                //fld_dateTime
+                classListRow[7] = dataReader.GetValue(7).ToString();
+                //fld_dateTime
+                classListRow[8] = dataReader.GetValue(8).ToString();
+                //fld_dateTime
+                classListRow[9] = dataReader.GetValue(9).ToString();
+                //fld_dateTime
+                classListRow[10] = dataReader.GetValue(10).ToString();
+                //fld_dateTime
+                classListRow[11] = dataReader.GetValue(11).ToString();
+                //fld_dateTime
+                classListRow[12] = dataReader.GetValue(12).ToString();
+                //fld_dateTime
+                classListRow[13] = dataReader.GetValue(13).ToString();
+                //fld_dateTime
+                classListRow[14] = dataReader.GetValue(14).ToString();
+
+
+                classListSet.Add(classListRow);
+            }
+
+
+            return classListSet;
+        }
+
+        public List<string[]> GetNtlavanaList()
+        {
+            List<string[]> classListSet = new List<string[]> { };
+            string[] classListRow;
+
+            sql = "select * from tbl_ClockIn where fld_lastName='Ntlavana';";
+
+
+            connection.Open();
+            command = new SqlCommand(sql, connection);
+            dataReader = command.ExecuteReader();
+
+            while (dataReader.Read())
+            {
+                classListRow = new string[15];
+
+                //fld_id, fld_firstName, fld_lastName,fld_personalIDnumber, fld_deviceID, fld_latitube, fld_longitude, fld_dateTime
+                //fld_id
+                classListRow[0] = dataReader.GetValue(0).ToString();
+                //fld_firstName
+                classListRow[1] = dataReader.GetValue(1).ToString();
+                //fld_lastName
+                classListRow[2] = dataReader.GetValue(2).ToString();
+                //fld_personalIDnumber
+                classListRow[3] = dataReader.GetValue(3).ToString();
+                //fld_deviceID
+                classListRow[4] = dataReader.GetValue(4).ToString();
+                //fld_latitube
+                classListRow[5] = dataReader.GetValue(5).ToString();
+                //fld_longitude
+                classListRow[6] = dataReader.GetValue(6).ToString();
+                //fld_dateTime
+                classListRow[7] = dataReader.GetValue(7).ToString();
+                //fld_dateTime
+                classListRow[8] = dataReader.GetValue(8).ToString();
+                //fld_dateTime
+                classListRow[9] = dataReader.GetValue(9).ToString();
+                //fld_dateTime
+                classListRow[10] = dataReader.GetValue(10).ToString();
+                //fld_dateTime
+                classListRow[11] = dataReader.GetValue(11).ToString();
+                //fld_dateTime
+                classListRow[12] = dataReader.GetValue(12).ToString();
+                //fld_dateTime
+                classListRow[13] = dataReader.GetValue(13).ToString();
+                //fld_dateTime
+                classListRow[14] = dataReader.GetValue(14).ToString();
+
+
+                classListSet.Add(classListRow);
+            }
+
+
+            return classListSet;
+        }
+
+        public List<string[]> GetBengeList()
+        {
+            List<string[]> classListSet = new List<string[]> { };
+            string[] classListRow;
+
+            sql = "select * from tbl_ClockIn where fld_lastName='Benge';";
+
+
+            connection.Open();
+            command = new SqlCommand(sql, connection);
+            dataReader = command.ExecuteReader();
+
+            while (dataReader.Read())
+            {
+                classListRow = new string[15];
+
+                //fld_id, fld_firstName, fld_lastName,fld_personalIDnumber, fld_deviceID, fld_latitube, fld_longitude, fld_dateTime
+                //fld_id
+                classListRow[0] = dataReader.GetValue(0).ToString();
+                //fld_firstName
+                classListRow[1] = dataReader.GetValue(1).ToString();
+                //fld_lastName
+                classListRow[2] = dataReader.GetValue(2).ToString();
+                //fld_personalIDnumber
+                classListRow[3] = dataReader.GetValue(3).ToString();
+                //fld_deviceID
+                classListRow[4] = dataReader.GetValue(4).ToString();
+                //fld_latitube
+                classListRow[5] = dataReader.GetValue(5).ToString();
+                //fld_longitude
+                classListRow[6] = dataReader.GetValue(6).ToString();
+                //fld_dateTime
+                classListRow[7] = dataReader.GetValue(7).ToString();
+                //fld_dateTime
+                classListRow[8] = dataReader.GetValue(8).ToString();
+                //fld_dateTime
+                classListRow[9] = dataReader.GetValue(9).ToString();
+                //fld_dateTime
+                classListRow[10] = dataReader.GetValue(10).ToString();
+                //fld_dateTime
+                classListRow[11] = dataReader.GetValue(11).ToString();
+                //fld_dateTime
+                classListRow[12] = dataReader.GetValue(12).ToString();
+                //fld_dateTime
+                classListRow[13] = dataReader.GetValue(13).ToString();
+                //fld_dateTime
+                classListRow[14] = dataReader.GetValue(14).ToString();
+
+
+                classListSet.Add(classListRow);
+            }
+
+
+            return classListSet;
+        }
+
+        public List<string[]> GetHufkeList()
+        {
+            List<string[]> classListSet = new List<string[]> { };
+            string[] classListRow;
+
+            sql = "select * from tbl_ClockIn where fld_lastName='Hufke';";
+
+
+            connection.Open();
+            command = new SqlCommand(sql, connection);
+            dataReader = command.ExecuteReader();
+
+            while (dataReader.Read())
+            {
+                classListRow = new string[15];
+
+                //fld_id, fld_firstName, fld_lastName,fld_personalIDnumber, fld_deviceID, fld_latitube, fld_longitude, fld_dateTime
+                //fld_id
+                classListRow[0] = dataReader.GetValue(0).ToString();
+                //fld_firstName
+                classListRow[1] = dataReader.GetValue(1).ToString();
+                //fld_lastName
+                classListRow[2] = dataReader.GetValue(2).ToString();
+                //fld_personalIDnumber
+                classListRow[3] = dataReader.GetValue(3).ToString();
+                //fld_deviceID
+                classListRow[4] = dataReader.GetValue(4).ToString();
+                //fld_latitube
+                classListRow[5] = dataReader.GetValue(5).ToString();
+                //fld_longitude
+                classListRow[6] = dataReader.GetValue(6).ToString();
+                //fld_dateTime
+                classListRow[7] = dataReader.GetValue(7).ToString();
+                //fld_dateTime
+                classListRow[8] = dataReader.GetValue(8).ToString();
+                //fld_dateTime
+                classListRow[9] = dataReader.GetValue(9).ToString();
+                //fld_dateTime
+                classListRow[10] = dataReader.GetValue(10).ToString();
+                //fld_dateTime
+                classListRow[11] = dataReader.GetValue(11).ToString();
+                //fld_dateTime
+                classListRow[12] = dataReader.GetValue(12).ToString();
+                //fld_dateTime
+                classListRow[13] = dataReader.GetValue(13).ToString();
+                //fld_dateTime
+                classListRow[14] = dataReader.GetValue(14).ToString();
+
+
+                classListSet.Add(classListRow);
+            }
+
+
+            return classListSet;
+        }
+
+        public List<string[]> GetRossList()
+        {
+            List<string[]> classListSet = new List<string[]> { };
+            string[] classListRow;
+
+            sql = "select * from tbl_ClockIn where fld_lastName='Ross';";
+
+
+            connection.Open();
+            command = new SqlCommand(sql, connection);
+            dataReader = command.ExecuteReader();
+
+            while (dataReader.Read())
+            {
+                classListRow = new string[15];
+
+                //fld_id, fld_firstName, fld_lastName,fld_personalIDnumber, fld_deviceID, fld_latitube, fld_longitude, fld_dateTime
+                //fld_id
+                classListRow[0] = dataReader.GetValue(0).ToString();
+                //fld_firstName
+                classListRow[1] = dataReader.GetValue(1).ToString();
+                //fld_lastName
+                classListRow[2] = dataReader.GetValue(2).ToString();
+                //fld_personalIDnumber
+                classListRow[3] = dataReader.GetValue(3).ToString();
+                //fld_deviceID
+                classListRow[4] = dataReader.GetValue(4).ToString();
+                //fld_latitube
+                classListRow[5] = dataReader.GetValue(5).ToString();
+                //fld_longitude
+                classListRow[6] = dataReader.GetValue(6).ToString();
+                //fld_dateTime
+                classListRow[7] = dataReader.GetValue(7).ToString();
+                //fld_dateTime
+                classListRow[8] = dataReader.GetValue(8).ToString();
+                //fld_dateTime
+                classListRow[9] = dataReader.GetValue(9).ToString();
+                //fld_dateTime
+                classListRow[10] = dataReader.GetValue(10).ToString();
+                //fld_dateTime
+                classListRow[11] = dataReader.GetValue(11).ToString();
+                //fld_dateTime
+                classListRow[12] = dataReader.GetValue(12).ToString();
+                //fld_dateTime
+                classListRow[13] = dataReader.GetValue(13).ToString();
+                //fld_dateTime
+                classListRow[14] = dataReader.GetValue(14).ToString();
+
+
+                classListSet.Add(classListRow);
+            }
+
+
+            return classListSet;
+        }
+
+        public List<string[]> GetSolomonsList()
+        {
+            List<string[]> classListSet = new List<string[]> { };
+            string[] classListRow;
+
+            sql = "select * from tbl_ClockIn where fld_lastName='Solomons';";
+
+
+            connection.Open();
+            command = new SqlCommand(sql, connection);
+            dataReader = command.ExecuteReader();
+
+            while (dataReader.Read())
+            {
+                classListRow = new string[15];
+
+                //fld_id, fld_firstName, fld_lastName,fld_personalIDnumber, fld_deviceID, fld_latitube, fld_longitude, fld_dateTime
+                //fld_id
+                classListRow[0] = dataReader.GetValue(0).ToString();
+                //fld_firstName
+                classListRow[1] = dataReader.GetValue(1).ToString();
+                //fld_lastName
+                classListRow[2] = dataReader.GetValue(2).ToString();
+                //fld_personalIDnumber
+                classListRow[3] = dataReader.GetValue(3).ToString();
+                //fld_deviceID
+                classListRow[4] = dataReader.GetValue(4).ToString();
+                //fld_latitube
+                classListRow[5] = dataReader.GetValue(5).ToString();
+                //fld_longitude
+                classListRow[6] = dataReader.GetValue(6).ToString();
+                //fld_dateTime
+                classListRow[7] = dataReader.GetValue(7).ToString();
+                //fld_dateTime
+                classListRow[8] = dataReader.GetValue(8).ToString();
+                //fld_dateTime
+                classListRow[9] = dataReader.GetValue(9).ToString();
+                //fld_dateTime
+                classListRow[10] = dataReader.GetValue(10).ToString();
+                //fld_dateTime
+                classListRow[11] = dataReader.GetValue(11).ToString();
+                //fld_dateTime
+                classListRow[12] = dataReader.GetValue(12).ToString();
+                //fld_dateTime
+                classListRow[13] = dataReader.GetValue(13).ToString();
+                //fld_dateTime
+                classListRow[14] = dataReader.GetValue(14).ToString();
+
+
+                classListSet.Add(classListRow);
+            }
+
+
+            return classListSet;
+        }
+
+        public List<string[]> GetMasekoList()
+        {
+            List<string[]> classListSet = new List<string[]> { };
+            string[] classListRow;
+
+            sql = "select * from tbl_ClockIn where fld_lastName='Maseko';";
+
+
+            connection.Open();
+            command = new SqlCommand(sql, connection);
+            dataReader = command.ExecuteReader();
+
+            while (dataReader.Read())
+            {
+                classListRow = new string[15];
+
+                //fld_id, fld_firstName, fld_lastName,fld_personalIDnumber, fld_deviceID, fld_latitube, fld_longitude, fld_dateTime
+                //fld_id
+                classListRow[0] = dataReader.GetValue(0).ToString();
+                //fld_firstName
+                classListRow[1] = dataReader.GetValue(1).ToString();
+                //fld_lastName
+                classListRow[2] = dataReader.GetValue(2).ToString();
+                //fld_personalIDnumber
+                classListRow[3] = dataReader.GetValue(3).ToString();
+                //fld_deviceID
+                classListRow[4] = dataReader.GetValue(4).ToString();
+                //fld_latitube
+                classListRow[5] = dataReader.GetValue(5).ToString();
+                //fld_longitude
+                classListRow[6] = dataReader.GetValue(6).ToString();
+                //fld_dateTime
+                classListRow[7] = dataReader.GetValue(7).ToString();
+                //fld_dateTime
+                classListRow[8] = dataReader.GetValue(8).ToString();
+                //fld_dateTime
+                classListRow[9] = dataReader.GetValue(9).ToString();
+                //fld_dateTime
+                classListRow[10] = dataReader.GetValue(10).ToString();
+                //fld_dateTime
+                classListRow[11] = dataReader.GetValue(11).ToString();
+                //fld_dateTime
+                classListRow[12] = dataReader.GetValue(12).ToString();
+                //fld_dateTime
+                classListRow[13] = dataReader.GetValue(13).ToString();
+                //fld_dateTime
+                classListRow[14] = dataReader.GetValue(14).ToString();
+
+
+                classListSet.Add(classListRow);
+            }
+
+
+            return classListSet;
+        }
+
+        public List<string[]> GetMbekwaList()
+        {
+            List<string[]> classListSet = new List<string[]> { };
+            string[] classListRow;
+
+            sql = "select * from tbl_ClockIn where fld_lastName='Mbekwa';";
+
+
+            connection.Open();
+            command = new SqlCommand(sql, connection);
+            dataReader = command.ExecuteReader();
+
+            while (dataReader.Read())
+            {
+                classListRow = new string[15];
+
+                //fld_id, fld_firstName, fld_lastName,fld_personalIDnumber, fld_deviceID, fld_latitube, fld_longitude, fld_dateTime
+                //fld_id
+                classListRow[0] = dataReader.GetValue(0).ToString();
+                //fld_firstName
+                classListRow[1] = dataReader.GetValue(1).ToString();
+                //fld_lastName
+                classListRow[2] = dataReader.GetValue(2).ToString();
+                //fld_personalIDnumber
+                classListRow[3] = dataReader.GetValue(3).ToString();
+                //fld_deviceID
+                classListRow[4] = dataReader.GetValue(4).ToString();
+                //fld_latitube
+                classListRow[5] = dataReader.GetValue(5).ToString();
+                //fld_longitude
+                classListRow[6] = dataReader.GetValue(6).ToString();
+                //fld_dateTime
+                classListRow[7] = dataReader.GetValue(7).ToString();
+                //fld_dateTime
+                classListRow[8] = dataReader.GetValue(8).ToString();
+                //fld_dateTime
+                classListRow[9] = dataReader.GetValue(9).ToString();
+                //fld_dateTime
+                classListRow[10] = dataReader.GetValue(10).ToString();
+                //fld_dateTime
+                classListRow[11] = dataReader.GetValue(11).ToString();
+                //fld_dateTime
+                classListRow[12] = dataReader.GetValue(12).ToString();
+                //fld_dateTime
+                classListRow[13] = dataReader.GetValue(13).ToString();
+                //fld_dateTime
+                classListRow[14] = dataReader.GetValue(14).ToString();
+
+
+                classListSet.Add(classListRow);
+            }
+
+
+            return classListSet;
+        }
+
+        public List<string[]> GetMpofuList()
+        {
+            List<string[]> classListSet = new List<string[]> { };
+            string[] classListRow;
+
+            sql = "select * from tbl_ClockIn where fld_lastName='Mpofu';";
+
+
+            connection.Open();
+            command = new SqlCommand(sql, connection);
+            dataReader = command.ExecuteReader();
+
+            while (dataReader.Read())
+            {
+                classListRow = new string[15];
+
+                //fld_id, fld_firstName, fld_lastName,fld_personalIDnumber, fld_deviceID, fld_latitube, fld_longitude, fld_dateTime
+                //fld_id
+                classListRow[0] = dataReader.GetValue(0).ToString();
+                //fld_firstName
+                classListRow[1] = dataReader.GetValue(1).ToString();
+                //fld_lastName
+                classListRow[2] = dataReader.GetValue(2).ToString();
+                //fld_personalIDnumber
+                classListRow[3] = dataReader.GetValue(3).ToString();
+                //fld_deviceID
+                classListRow[4] = dataReader.GetValue(4).ToString();
+                //fld_latitube
+                classListRow[5] = dataReader.GetValue(5).ToString();
+                //fld_longitude
+                classListRow[6] = dataReader.GetValue(6).ToString();
+                //fld_dateTime
+                classListRow[7] = dataReader.GetValue(7).ToString();
+                //fld_dateTime
+                classListRow[8] = dataReader.GetValue(8).ToString();
+                //fld_dateTime
+                classListRow[9] = dataReader.GetValue(9).ToString();
+                //fld_dateTime
+                classListRow[10] = dataReader.GetValue(10).ToString();
+                //fld_dateTime
+                classListRow[11] = dataReader.GetValue(11).ToString();
+                //fld_dateTime
+                classListRow[12] = dataReader.GetValue(12).ToString();
+                //fld_dateTime
+                classListRow[13] = dataReader.GetValue(13).ToString();
+                //fld_dateTime
+                classListRow[14] = dataReader.GetValue(14).ToString();
+
+
+                classListSet.Add(classListRow);
+            }
+
+
+            return classListSet;
+        }
+
+        public List<string[]> GetCebeniList()
+        {
+            List<string[]> classListSet = new List<string[]> { };
+            string[] classListRow;
+
+            sql = "select * from tbl_ClockIn where fld_lastName='Cebeni';";
+
+
+            connection.Open();
+            command = new SqlCommand(sql, connection);
+            dataReader = command.ExecuteReader();
+
+            while (dataReader.Read())
+            {
+                classListRow = new string[15];
+
+                //fld_id, fld_firstName, fld_lastName,fld_personalIDnumber, fld_deviceID, fld_latitube, fld_longitude, fld_dateTime
+                //fld_id
+                classListRow[0] = dataReader.GetValue(0).ToString();
+                //fld_firstName
+                classListRow[1] = dataReader.GetValue(1).ToString();
+                //fld_lastName
+                classListRow[2] = dataReader.GetValue(2).ToString();
+                //fld_personalIDnumber
+                classListRow[3] = dataReader.GetValue(3).ToString();
+                //fld_deviceID
+                classListRow[4] = dataReader.GetValue(4).ToString();
+                //fld_latitube
+                classListRow[5] = dataReader.GetValue(5).ToString();
+                //fld_longitude
+                classListRow[6] = dataReader.GetValue(6).ToString();
+                //fld_dateTime
+                classListRow[7] = dataReader.GetValue(7).ToString();
+                //fld_dateTime
+                classListRow[8] = dataReader.GetValue(8).ToString();
+                //fld_dateTime
+                classListRow[9] = dataReader.GetValue(9).ToString();
+                //fld_dateTime
+                classListRow[10] = dataReader.GetValue(10).ToString();
+                //fld_dateTime
+                classListRow[11] = dataReader.GetValue(11).ToString();
+                //fld_dateTime
+                classListRow[12] = dataReader.GetValue(12).ToString();
+                //fld_dateTime
+                classListRow[13] = dataReader.GetValue(13).ToString();
+                //fld_dateTime
+                classListRow[14] = dataReader.GetValue(14).ToString();
+
+
+                classListSet.Add(classListRow);
+            }
+
+
+            return classListSet;
+        }
+        
         public bool AddLecturer(string name, string password)
         {
             sql = "insert into Lecturers(name,password) values ('" + name + "','" + password + "'); ";
