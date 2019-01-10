@@ -20,9 +20,9 @@ namespace WindowsFormsApp4 {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("DVchocDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("DVchocDataSet1")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class DVchocDataSet : global::System.Data.DataSet {
+    public partial class DVchocDataSet1 : global::System.Data.DataSet {
         
         private tbl_ClockInDataTable tabletbl_ClockIn;
         
@@ -30,7 +30,7 @@ namespace WindowsFormsApp4 {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public DVchocDataSet() {
+        public DVchocDataSet1() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace WindowsFormsApp4 {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        protected DVchocDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected DVchocDataSet1(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -127,7 +127,7 @@ namespace WindowsFormsApp4 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            DVchocDataSet cln = ((DVchocDataSet)(base.Clone()));
+            DVchocDataSet1 cln = ((DVchocDataSet1)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -199,9 +199,9 @@ namespace WindowsFormsApp4 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "DVchocDataSet";
+            this.DataSetName = "DVchocDataSet1";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/DVchocDataSet.xsd";
+            this.Namespace = "http://tempuri.org/DVchocDataSet1.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tabletbl_ClockIn = new tbl_ClockInDataTable();
@@ -225,7 +225,7 @@ namespace WindowsFormsApp4 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            DVchocDataSet ds = new DVchocDataSet();
+            DVchocDataSet1 ds = new DVchocDataSet1();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -279,8 +279,6 @@ namespace WindowsFormsApp4 {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class tbl_ClockInDataTable : global::System.Data.TypedTableBase<tbl_ClockInRow> {
             
-            private global::System.Data.DataColumn columnfld_id;
-            
             private global::System.Data.DataColumn columnfld_firstName;
             
             private global::System.Data.DataColumn columnfld_lastName;
@@ -295,15 +293,7 @@ namespace WindowsFormsApp4 {
             
             private global::System.Data.DataColumn columnfld_browserVersion;
             
-            private global::System.Data.DataColumn columnfld_navigatorUserAgent;
-            
-            private global::System.Data.DataColumn columnfld_navigatorAppVersion;
-            
-            private global::System.Data.DataColumn columnfld_navigatorPlatform;
-            
-            private global::System.Data.DataColumn columnfld_navigatorVendor;
-            
-            private global::System.Data.DataColumn columnfld_latitube;
+            private global::System.Data.DataColumn columnfld_latitude;
             
             private global::System.Data.DataColumn columnfld_longitude;
             
@@ -340,14 +330,6 @@ namespace WindowsFormsApp4 {
             protected tbl_ClockInDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn fld_idColumn {
-                get {
-                    return this.columnfld_id;
-                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -408,41 +390,9 @@ namespace WindowsFormsApp4 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn fld_navigatorUserAgentColumn {
+            public global::System.Data.DataColumn fld_latitudeColumn {
                 get {
-                    return this.columnfld_navigatorUserAgent;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn fld_navigatorAppVersionColumn {
-                get {
-                    return this.columnfld_navigatorAppVersion;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn fld_navigatorPlatformColumn {
-                get {
-                    return this.columnfld_navigatorPlatform;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn fld_navigatorVendorColumn {
-                get {
-                    return this.columnfld_navigatorVendor;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn fld_latitubeColumn {
-                get {
-                    return this.columnfld_latitube;
+                    return this.columnfld_latitude;
                 }
             }
             
@@ -499,10 +449,9 @@ namespace WindowsFormsApp4 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public tbl_ClockInRow Addtbl_ClockInRow(string fld_firstName, string fld_lastName, string fld_personalIDnumber, string fld_osName, string fld_osVersion, string fld_browserName, string fld_browserVersion, string fld_navigatorUserAgent, string fld_navigatorAppVersion, string fld_navigatorPlatform, string fld_navigatorVendor, string fld_latitube, string fld_longitude, System.DateTime fld_dateTime) {
+            public tbl_ClockInRow Addtbl_ClockInRow(string fld_firstName, string fld_lastName, string fld_personalIDnumber, string fld_osName, string fld_osVersion, string fld_browserName, string fld_browserVersion, string fld_latitude, string fld_longitude, System.DateTime fld_dateTime) {
                 tbl_ClockInRow rowtbl_ClockInRow = ((tbl_ClockInRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        null,
                         fld_firstName,
                         fld_lastName,
                         fld_personalIDnumber,
@@ -510,11 +459,7 @@ namespace WindowsFormsApp4 {
                         fld_osVersion,
                         fld_browserName,
                         fld_browserVersion,
-                        fld_navigatorUserAgent,
-                        fld_navigatorAppVersion,
-                        fld_navigatorPlatform,
-                        fld_navigatorVendor,
-                        fld_latitube,
+                        fld_latitude,
                         fld_longitude,
                         fld_dateTime};
                 rowtbl_ClockInRow.ItemArray = columnValuesArray;
@@ -539,7 +484,6 @@ namespace WindowsFormsApp4 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal void InitVars() {
-                this.columnfld_id = base.Columns["fld_id"];
                 this.columnfld_firstName = base.Columns["fld_firstName"];
                 this.columnfld_lastName = base.Columns["fld_lastName"];
                 this.columnfld_personalIDnumber = base.Columns["fld_personalIDnumber"];
@@ -547,11 +491,7 @@ namespace WindowsFormsApp4 {
                 this.columnfld_osVersion = base.Columns["fld_osVersion"];
                 this.columnfld_browserName = base.Columns["fld_browserName"];
                 this.columnfld_browserVersion = base.Columns["fld_browserVersion"];
-                this.columnfld_navigatorUserAgent = base.Columns["fld_navigatorUserAgent"];
-                this.columnfld_navigatorAppVersion = base.Columns["fld_navigatorAppVersion"];
-                this.columnfld_navigatorPlatform = base.Columns["fld_navigatorPlatform"];
-                this.columnfld_navigatorVendor = base.Columns["fld_navigatorVendor"];
-                this.columnfld_latitube = base.Columns["fld_latitube"];
+                this.columnfld_latitude = base.Columns["fld_latitude"];
                 this.columnfld_longitude = base.Columns["fld_longitude"];
                 this.columnfld_dateTime = base.Columns["fld_dateTime"];
             }
@@ -559,8 +499,6 @@ namespace WindowsFormsApp4 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             private void InitClass() {
-                this.columnfld_id = new global::System.Data.DataColumn("fld_id", typeof(long), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnfld_id);
                 this.columnfld_firstName = new global::System.Data.DataColumn("fld_firstName", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnfld_firstName);
                 this.columnfld_lastName = new global::System.Data.DataColumn("fld_lastName", typeof(string), null, global::System.Data.MappingType.Element);
@@ -575,25 +513,12 @@ namespace WindowsFormsApp4 {
                 base.Columns.Add(this.columnfld_browserName);
                 this.columnfld_browserVersion = new global::System.Data.DataColumn("fld_browserVersion", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnfld_browserVersion);
-                this.columnfld_navigatorUserAgent = new global::System.Data.DataColumn("fld_navigatorUserAgent", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnfld_navigatorUserAgent);
-                this.columnfld_navigatorAppVersion = new global::System.Data.DataColumn("fld_navigatorAppVersion", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnfld_navigatorAppVersion);
-                this.columnfld_navigatorPlatform = new global::System.Data.DataColumn("fld_navigatorPlatform", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnfld_navigatorPlatform);
-                this.columnfld_navigatorVendor = new global::System.Data.DataColumn("fld_navigatorVendor", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnfld_navigatorVendor);
-                this.columnfld_latitube = new global::System.Data.DataColumn("fld_latitube", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnfld_latitube);
+                this.columnfld_latitude = new global::System.Data.DataColumn("fld_latitude", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnfld_latitude);
                 this.columnfld_longitude = new global::System.Data.DataColumn("fld_longitude", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnfld_longitude);
                 this.columnfld_dateTime = new global::System.Data.DataColumn("fld_dateTime", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnfld_dateTime);
-                this.columnfld_id.AutoIncrement = true;
-                this.columnfld_id.AutoIncrementSeed = -1;
-                this.columnfld_id.AutoIncrementStep = -1;
-                this.columnfld_id.AllowDBNull = false;
-                this.columnfld_id.ReadOnly = true;
                 this.columnfld_firstName.MaxLength = 50;
                 this.columnfld_lastName.MaxLength = 50;
                 this.columnfld_personalIDnumber.MaxLength = 500;
@@ -601,11 +526,7 @@ namespace WindowsFormsApp4 {
                 this.columnfld_osVersion.MaxLength = 500;
                 this.columnfld_browserName.MaxLength = 500;
                 this.columnfld_browserVersion.MaxLength = 500;
-                this.columnfld_navigatorUserAgent.MaxLength = 500;
-                this.columnfld_navigatorAppVersion.MaxLength = 500;
-                this.columnfld_navigatorPlatform.MaxLength = 500;
-                this.columnfld_navigatorVendor.MaxLength = 500;
-                this.columnfld_latitube.MaxLength = 50;
+                this.columnfld_latitude.MaxLength = 50;
                 this.columnfld_longitude.MaxLength = 50;
             }
             
@@ -674,7 +595,7 @@ namespace WindowsFormsApp4 {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DVchocDataSet ds = new DVchocDataSet();
+                DVchocDataSet1 ds = new DVchocDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -745,17 +666,6 @@ namespace WindowsFormsApp4 {
             internal tbl_ClockInRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
                 this.tabletbl_ClockIn = ((tbl_ClockInDataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public long fld_id {
-                get {
-                    return ((long)(this[this.tabletbl_ClockIn.fld_idColumn]));
-                }
-                set {
-                    this[this.tabletbl_ClockIn.fld_idColumn] = value;
-                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -872,81 +782,17 @@ namespace WindowsFormsApp4 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string fld_navigatorUserAgent {
+            public string fld_latitude {
                 get {
                     try {
-                        return ((string)(this[this.tabletbl_ClockIn.fld_navigatorUserAgentColumn]));
+                        return ((string)(this[this.tabletbl_ClockIn.fld_latitudeColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'fld_navigatorUserAgent\' in table \'tbl_ClockIn\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'fld_latitude\' in table \'tbl_ClockIn\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabletbl_ClockIn.fld_navigatorUserAgentColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string fld_navigatorAppVersion {
-                get {
-                    try {
-                        return ((string)(this[this.tabletbl_ClockIn.fld_navigatorAppVersionColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'fld_navigatorAppVersion\' in table \'tbl_ClockIn\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tabletbl_ClockIn.fld_navigatorAppVersionColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string fld_navigatorPlatform {
-                get {
-                    try {
-                        return ((string)(this[this.tabletbl_ClockIn.fld_navigatorPlatformColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'fld_navigatorPlatform\' in table \'tbl_ClockIn\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tabletbl_ClockIn.fld_navigatorPlatformColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string fld_navigatorVendor {
-                get {
-                    try {
-                        return ((string)(this[this.tabletbl_ClockIn.fld_navigatorVendorColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'fld_navigatorVendor\' in table \'tbl_ClockIn\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tabletbl_ClockIn.fld_navigatorVendorColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string fld_latitube {
-                get {
-                    try {
-                        return ((string)(this[this.tabletbl_ClockIn.fld_latitubeColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'fld_latitube\' in table \'tbl_ClockIn\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tabletbl_ClockIn.fld_latitubeColumn] = value;
+                    this[this.tabletbl_ClockIn.fld_latitudeColumn] = value;
                 }
             }
             
@@ -1068,62 +914,14 @@ namespace WindowsFormsApp4 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Isfld_navigatorUserAgentNull() {
-                return this.IsNull(this.tabletbl_ClockIn.fld_navigatorUserAgentColumn);
+            public bool Isfld_latitudeNull() {
+                return this.IsNull(this.tabletbl_ClockIn.fld_latitudeColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Setfld_navigatorUserAgentNull() {
-                this[this.tabletbl_ClockIn.fld_navigatorUserAgentColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Isfld_navigatorAppVersionNull() {
-                return this.IsNull(this.tabletbl_ClockIn.fld_navigatorAppVersionColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Setfld_navigatorAppVersionNull() {
-                this[this.tabletbl_ClockIn.fld_navigatorAppVersionColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Isfld_navigatorPlatformNull() {
-                return this.IsNull(this.tabletbl_ClockIn.fld_navigatorPlatformColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Setfld_navigatorPlatformNull() {
-                this[this.tabletbl_ClockIn.fld_navigatorPlatformColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Isfld_navigatorVendorNull() {
-                return this.IsNull(this.tabletbl_ClockIn.fld_navigatorVendorColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Setfld_navigatorVendorNull() {
-                this[this.tabletbl_ClockIn.fld_navigatorVendorColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Isfld_latitubeNull() {
-                return this.IsNull(this.tabletbl_ClockIn.fld_latitubeColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Setfld_latitubeNull() {
-                this[this.tabletbl_ClockIn.fld_latitubeColumn] = global::System.Convert.DBNull;
+            public void Setfld_latitudeNull() {
+                this[this.tabletbl_ClockIn.fld_latitudeColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1186,7 +984,7 @@ namespace WindowsFormsApp4 {
         }
     }
 }
-namespace WindowsFormsApp4.DVchocDataSetTableAdapters {
+namespace WindowsFormsApp4.DVchocDataSet1TableAdapters {
     
     
     /// <summary>
@@ -1310,7 +1108,6 @@ namespace WindowsFormsApp4.DVchocDataSetTableAdapters {
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "tbl_ClockIn";
-            tableMapping.ColumnMappings.Add("fld_id", "fld_id");
             tableMapping.ColumnMappings.Add("fld_firstName", "fld_firstName");
             tableMapping.ColumnMappings.Add("fld_lastName", "fld_lastName");
             tableMapping.ColumnMappings.Add("fld_personalIDnumber", "fld_personalIDnumber");
@@ -1318,17 +1115,13 @@ namespace WindowsFormsApp4.DVchocDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("fld_osVersion", "fld_osVersion");
             tableMapping.ColumnMappings.Add("fld_browserName", "fld_browserName");
             tableMapping.ColumnMappings.Add("fld_browserVersion", "fld_browserVersion");
-            tableMapping.ColumnMappings.Add("fld_navigatorUserAgent", "fld_navigatorUserAgent");
-            tableMapping.ColumnMappings.Add("fld_navigatorAppVersion", "fld_navigatorAppVersion");
-            tableMapping.ColumnMappings.Add("fld_navigatorPlatform", "fld_navigatorPlatform");
-            tableMapping.ColumnMappings.Add("fld_navigatorVendor", "fld_navigatorVendor");
-            tableMapping.ColumnMappings.Add("fld_latitube", "fld_latitube");
+            tableMapping.ColumnMappings.Add("fld_latitude", "fld_latitude");
             tableMapping.ColumnMappings.Add("fld_longitude", "fld_longitude");
             tableMapping.ColumnMappings.Add("fld_dateTime", "fld_dateTime");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[tbl_ClockIn] ([fld_firstName], [fld_lastName], [fld_personalIDnumber], [fld_osName], [fld_osVersion], [fld_browserName], [fld_browserVersion], [fld_navigatorUserAgent], [fld_navigatorAppVersion], [fld_navigatorPlatform], [fld_navigatorVendor], [fld_latitube], [fld_longitude], [fld_dateTime]) VALUES (@fld_firstName, @fld_lastName, @fld_personalIDnumber, @fld_osName, @fld_osVersion, @fld_browserName, @fld_browserVersion, @fld_navigatorUserAgent, @fld_navigatorAppVersion, @fld_navigatorPlatform, @fld_navigatorVendor, @fld_latitube, @fld_longitude, @fld_dateTime)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[tbl_ClockIn] ([fld_firstName], [fld_lastName], [fld_personalIDnumber], [fld_osName], [fld_osVersion], [fld_browserName], [fld_browserVersion], [fld_latitude], [fld_longitude], [fld_dateTime]) VALUES (@fld_firstName, @fld_lastName, @fld_personalIDnumber, @fld_osName, @fld_osVersion, @fld_browserName, @fld_browserVersion, @fld_latitude, @fld_longitude, @fld_dateTime)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fld_firstName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fld_firstName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fld_lastName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fld_lastName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -1337,11 +1130,7 @@ namespace WindowsFormsApp4.DVchocDataSetTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fld_osVersion", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fld_osVersion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fld_browserName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fld_browserName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fld_browserVersion", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fld_browserVersion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fld_navigatorUserAgent", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fld_navigatorUserAgent", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fld_navigatorAppVersion", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fld_navigatorAppVersion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fld_navigatorPlatform", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fld_navigatorPlatform", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fld_navigatorVendor", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fld_navigatorVendor", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fld_latitube", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fld_latitube", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fld_latitude", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fld_latitude", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fld_longitude", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fld_longitude", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fld_dateTime", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fld_dateTime", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
@@ -1359,7 +1148,9 @@ namespace WindowsFormsApp4.DVchocDataSetTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT  fld_firstName, fld_lastName, fld_personalIDnumber, fld_osName, fld_osVersion, fld_browserName, fld_browserVersion, fld_latitude, fld_longitude, fld_dateTime FROM dbo.tbl_ClockIn";
+            this._commandCollection[0].CommandText = "SELECT fld_firstName, fld_lastName, fld_personalIDnumber, fld_osName, fld_osVersi" +
+                "on, fld_browserName, fld_browserVersion, fld_latitude, fld_longitude, fld_dateTi" +
+                "me FROM dbo.tbl_ClockIn";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -1367,7 +1158,7 @@ namespace WindowsFormsApp4.DVchocDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DVchocDataSet.tbl_ClockInDataTable dataTable) {
+        public virtual int Fill(DVchocDataSet1.tbl_ClockInDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -1380,9 +1171,9 @@ namespace WindowsFormsApp4.DVchocDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DVchocDataSet.tbl_ClockInDataTable GetData() {
+        public virtual DVchocDataSet1.tbl_ClockInDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DVchocDataSet.tbl_ClockInDataTable dataTable = new DVchocDataSet.tbl_ClockInDataTable();
+            DVchocDataSet1.tbl_ClockInDataTable dataTable = new DVchocDataSet1.tbl_ClockInDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1390,14 +1181,14 @@ namespace WindowsFormsApp4.DVchocDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DVchocDataSet.tbl_ClockInDataTable dataTable) {
+        public virtual int Update(DVchocDataSet1.tbl_ClockInDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DVchocDataSet dataSet) {
+        public virtual int Update(DVchocDataSet1 dataSet) {
             return this.Adapter.Update(dataSet, "tbl_ClockIn");
         }
         
@@ -1420,7 +1211,7 @@ namespace WindowsFormsApp4.DVchocDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string fld_firstName, string fld_lastName, string fld_personalIDnumber, string fld_osName, string fld_osVersion, string fld_browserName, string fld_browserVersion, string fld_navigatorUserAgent, string fld_navigatorAppVersion, string fld_navigatorPlatform, string fld_navigatorVendor, string fld_latitube, string fld_longitude, global::System.Nullable<global::System.DateTime> fld_dateTime) {
+        public virtual int Insert(string fld_firstName, string fld_lastName, string fld_personalIDnumber, string fld_osName, string fld_osVersion, string fld_browserName, string fld_browserVersion, string fld_latitude, string fld_longitude, global::System.Nullable<global::System.DateTime> fld_dateTime) {
             if ((fld_firstName == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -1463,47 +1254,23 @@ namespace WindowsFormsApp4.DVchocDataSetTableAdapters {
             else {
                 this.Adapter.InsertCommand.Parameters[6].Value = ((string)(fld_browserVersion));
             }
-            if ((fld_navigatorUserAgent == null)) {
+            if ((fld_latitude == null)) {
                 this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(fld_navigatorUserAgent));
+                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(fld_latitude));
             }
-            if ((fld_navigatorAppVersion == null)) {
+            if ((fld_longitude == null)) {
                 this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[8].Value = ((string)(fld_navigatorAppVersion));
-            }
-            if ((fld_navigatorPlatform == null)) {
-                this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[9].Value = ((string)(fld_navigatorPlatform));
-            }
-            if ((fld_navigatorVendor == null)) {
-                this.Adapter.InsertCommand.Parameters[10].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[10].Value = ((string)(fld_navigatorVendor));
-            }
-            if ((fld_latitube == null)) {
-                this.Adapter.InsertCommand.Parameters[11].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[11].Value = ((string)(fld_latitube));
-            }
-            if ((fld_longitude == null)) {
-                this.Adapter.InsertCommand.Parameters[12].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[12].Value = ((string)(fld_longitude));
+                this.Adapter.InsertCommand.Parameters[8].Value = ((string)(fld_longitude));
             }
             if ((fld_dateTime.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[13].Value = ((System.DateTime)(fld_dateTime.Value));
+                this.Adapter.InsertCommand.Parameters[9].Value = ((System.DateTime)(fld_dateTime.Value));
             }
             else {
-                this.Adapter.InsertCommand.Parameters[13].Value = global::System.DBNull.Value;
+                this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1613,7 +1380,7 @@ namespace WindowsFormsApp4.DVchocDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateUpdatedRows(DVchocDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(DVchocDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._tbl_ClockInTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.tbl_ClockIn.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
@@ -1632,7 +1399,7 @@ namespace WindowsFormsApp4.DVchocDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateInsertedRows(DVchocDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(DVchocDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._tbl_ClockInTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.tbl_ClockIn.Select(null, null, global::System.Data.DataViewRowState.Added);
@@ -1650,7 +1417,7 @@ namespace WindowsFormsApp4.DVchocDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateDeletedRows(DVchocDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(DVchocDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             if ((this._tbl_ClockInTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.tbl_ClockIn.Select(null, null, global::System.Data.DataViewRowState.Deleted);
@@ -1692,7 +1459,7 @@ namespace WindowsFormsApp4.DVchocDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public virtual int UpdateAll(DVchocDataSet dataSet) {
+        public virtual int UpdateAll(DVchocDataSet1 dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

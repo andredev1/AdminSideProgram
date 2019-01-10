@@ -51,6 +51,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DVchocDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DVchocDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DVchocDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +86,17 @@
     </None>
     <None Include="DVchocDataSet.xss">
       <DependentUpon>DVchocDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DVchocDataSet1.xsc">
+      <DependentUpon>DVchocDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DVchocDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DVchocDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DVchocDataSet1.xss">
+      <DependentUpon>DVchocDataSet1.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

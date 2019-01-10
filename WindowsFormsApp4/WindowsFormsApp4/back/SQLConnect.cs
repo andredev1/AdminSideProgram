@@ -72,7 +72,7 @@ namespace back
 
             while (dataReader.Read())
             {
-                classListRow = new string[15];
+                classListRow = new string[10];
 
                 //fld_id, fld_firstName, fld_lastName,fld_personalIDnumber, fld_deviceID, fld_latitube, fld_longitude, fld_dateTime
                 //fld_id
@@ -95,16 +95,6 @@ namespace back
                 classListRow[8] = dataReader.GetValue(8).ToString();
                 //fld_dateTime
                 classListRow[9] = dataReader.GetValue(9).ToString();
-                //fld_dateTime
-                classListRow[10] = dataReader.GetValue(10).ToString();
-                //fld_dateTime
-                classListRow[11] = dataReader.GetValue(11).ToString();
-                //fld_dateTime
-                classListRow[12] = dataReader.GetValue(12).ToString();
-                //fld_dateTime
-                classListRow[13] = dataReader.GetValue(13).ToString();
-                //fld_dateTime
-                classListRow[14] = dataReader.GetValue(14).ToString();
 
 
                 classListSet.Add(classListRow);
@@ -128,7 +118,7 @@ namespace back
 
             while (dataReader.Read())
             {
-                classListRow = new string[15];
+                classListRow = new string[10];
 
                 //fld_id, fld_firstName, fld_lastName,fld_personalIDnumber, fld_deviceID, fld_latitube, fld_longitude, fld_dateTime
                 //fld_id
@@ -151,16 +141,6 @@ namespace back
                 classListRow[8] = dataReader.GetValue(8).ToString();
                 //fld_dateTime
                 classListRow[9] = dataReader.GetValue(9).ToString();
-                //fld_dateTime
-                classListRow[10] = dataReader.GetValue(10).ToString();
-                //fld_dateTime
-                classListRow[11] = dataReader.GetValue(11).ToString();
-                //fld_dateTime
-                classListRow[12] = dataReader.GetValue(12).ToString();
-                //fld_dateTime
-                classListRow[13] = dataReader.GetValue(13).ToString();
-                //fld_dateTime
-                classListRow[14] = dataReader.GetValue(14).ToString();
 
 
                 classListSet.Add(classListRow);
@@ -184,7 +164,7 @@ namespace back
 
             while (dataReader.Read())
             {
-                classListRow = new string[15];
+                classListRow = new string[10];
 
                 //fld_id, fld_firstName, fld_lastName,fld_personalIDnumber, fld_deviceID, fld_latitube, fld_longitude, fld_dateTime
                 //fld_id
@@ -207,17 +187,6 @@ namespace back
                 classListRow[8] = dataReader.GetValue(8).ToString();
                 //fld_dateTime
                 classListRow[9] = dataReader.GetValue(9).ToString();
-                //fld_dateTime
-                classListRow[10] = dataReader.GetValue(10).ToString();
-                //fld_dateTime
-                classListRow[11] = dataReader.GetValue(11).ToString();
-                //fld_dateTime
-                classListRow[12] = dataReader.GetValue(12).ToString();
-                //fld_dateTime
-                classListRow[13] = dataReader.GetValue(13).ToString();
-                //fld_dateTime
-                classListRow[14] = dataReader.GetValue(14).ToString();
-
 
                 classListSet.Add(classListRow);
             }
@@ -240,7 +209,7 @@ namespace back
 
             while (dataReader.Read())
             {
-                classListRow = new string[15];
+                classListRow = new string[10];
 
                 //fld_id, fld_firstName, fld_lastName,fld_personalIDnumber, fld_deviceID, fld_latitube, fld_longitude, fld_dateTime
                 //fld_id
@@ -263,16 +232,7 @@ namespace back
                 classListRow[8] = dataReader.GetValue(8).ToString();
                 //fld_dateTime
                 classListRow[9] = dataReader.GetValue(9).ToString();
-                //fld_dateTime
-                classListRow[10] = dataReader.GetValue(10).ToString();
-                //fld_dateTime
-                classListRow[11] = dataReader.GetValue(11).ToString();
-                //fld_dateTime
-                classListRow[12] = dataReader.GetValue(12).ToString();
-                //fld_dateTime
-                classListRow[13] = dataReader.GetValue(13).ToString();
-                //fld_dateTime
-                classListRow[14] = dataReader.GetValue(14).ToString();
+
 
 
                 classListSet.Add(classListRow);
@@ -296,7 +256,7 @@ namespace back
 
             while (dataReader.Read())
             {
-                classListRow = new string[15];
+                classListRow = new string[10];
 
                 //fld_id, fld_firstName, fld_lastName,fld_personalIDnumber, fld_deviceID, fld_latitube, fld_longitude, fld_dateTime
                 //fld_id
@@ -319,16 +279,7 @@ namespace back
                 classListRow[8] = dataReader.GetValue(8).ToString();
                 //fld_dateTime
                 classListRow[9] = dataReader.GetValue(9).ToString();
-                //fld_dateTime
-                classListRow[10] = dataReader.GetValue(10).ToString();
-                //fld_dateTime
-                classListRow[11] = dataReader.GetValue(11).ToString();
-                //fld_dateTime
-                classListRow[12] = dataReader.GetValue(12).ToString();
-                //fld_dateTime
-                classListRow[13] = dataReader.GetValue(13).ToString();
-                //fld_dateTime
-                classListRow[14] = dataReader.GetValue(14).ToString();
+
 
 
                 classListSet.Add(classListRow);
@@ -352,7 +303,7 @@ namespace back
 
             while (dataReader.Read())
             {
-                classListRow = new string[15];
+                classListRow = new string[10];
 
                 //fld_id, fld_firstName, fld_lastName,fld_personalIDnumber, fld_deviceID, fld_latitube, fld_longitude, fld_dateTime
                 //fld_id
@@ -375,16 +326,7 @@ namespace back
                 classListRow[8] = dataReader.GetValue(8).ToString();
                 //fld_dateTime
                 classListRow[9] = dataReader.GetValue(9).ToString();
-                //fld_dateTime
-                classListRow[10] = dataReader.GetValue(10).ToString();
-                //fld_dateTime
-                classListRow[11] = dataReader.GetValue(11).ToString();
-                //fld_dateTime
-                classListRow[12] = dataReader.GetValue(12).ToString();
-                //fld_dateTime
-                classListRow[13] = dataReader.GetValue(13).ToString();
-                //fld_dateTime
-                classListRow[14] = dataReader.GetValue(14).ToString();
+
 
 
                 classListSet.Add(classListRow);
@@ -408,7 +350,7 @@ namespace back
 
             while (dataReader.Read())
             {
-                classListRow = new string[15];
+                classListRow = new string[10];
 
                 //fld_id, fld_firstName, fld_lastName,fld_personalIDnumber, fld_deviceID, fld_latitube, fld_longitude, fld_dateTime
                 //fld_id
@@ -431,16 +373,7 @@ namespace back
                 classListRow[8] = dataReader.GetValue(8).ToString();
                 //fld_dateTime
                 classListRow[9] = dataReader.GetValue(9).ToString();
-                //fld_dateTime
-                classListRow[10] = dataReader.GetValue(10).ToString();
-                //fld_dateTime
-                classListRow[11] = dataReader.GetValue(11).ToString();
-                //fld_dateTime
-                classListRow[12] = dataReader.GetValue(12).ToString();
-                //fld_dateTime
-                classListRow[13] = dataReader.GetValue(13).ToString();
-                //fld_dateTime
-                classListRow[14] = dataReader.GetValue(14).ToString();
+
 
 
                 classListSet.Add(classListRow);
@@ -464,7 +397,7 @@ namespace back
 
             while (dataReader.Read())
             {
-                classListRow = new string[15];
+                classListRow = new string[10];
 
                 //fld_id, fld_firstName, fld_lastName,fld_personalIDnumber, fld_deviceID, fld_latitube, fld_longitude, fld_dateTime
                 //fld_id
@@ -487,16 +420,7 @@ namespace back
                 classListRow[8] = dataReader.GetValue(8).ToString();
                 //fld_dateTime
                 classListRow[9] = dataReader.GetValue(9).ToString();
-                //fld_dateTime
-                classListRow[10] = dataReader.GetValue(10).ToString();
-                //fld_dateTime
-                classListRow[11] = dataReader.GetValue(11).ToString();
-                //fld_dateTime
-                classListRow[12] = dataReader.GetValue(12).ToString();
-                //fld_dateTime
-                classListRow[13] = dataReader.GetValue(13).ToString();
-                //fld_dateTime
-                classListRow[14] = dataReader.GetValue(14).ToString();
+
 
 
                 classListSet.Add(classListRow);
@@ -520,7 +444,7 @@ namespace back
 
             while (dataReader.Read())
             {
-                classListRow = new string[15];
+                classListRow = new string[10];
 
                 //fld_id, fld_firstName, fld_lastName,fld_personalIDnumber, fld_deviceID, fld_latitube, fld_longitude, fld_dateTime
                 //fld_id
@@ -543,16 +467,7 @@ namespace back
                 classListRow[8] = dataReader.GetValue(8).ToString();
                 //fld_dateTime
                 classListRow[9] = dataReader.GetValue(9).ToString();
-                //fld_dateTime
-                classListRow[10] = dataReader.GetValue(10).ToString();
-                //fld_dateTime
-                classListRow[11] = dataReader.GetValue(11).ToString();
-                //fld_dateTime
-                classListRow[12] = dataReader.GetValue(12).ToString();
-                //fld_dateTime
-                classListRow[13] = dataReader.GetValue(13).ToString();
-                //fld_dateTime
-                classListRow[14] = dataReader.GetValue(14).ToString();
+
 
 
                 classListSet.Add(classListRow);
@@ -576,7 +491,7 @@ namespace back
 
             while (dataReader.Read())
             {
-                classListRow = new string[15];
+                classListRow = new string[10];
 
                 //fld_id, fld_firstName, fld_lastName,fld_personalIDnumber, fld_deviceID, fld_latitube, fld_longitude, fld_dateTime
                 //fld_id
@@ -599,16 +514,7 @@ namespace back
                 classListRow[8] = dataReader.GetValue(8).ToString();
                 //fld_dateTime
                 classListRow[9] = dataReader.GetValue(9).ToString();
-                //fld_dateTime
-                classListRow[10] = dataReader.GetValue(10).ToString();
-                //fld_dateTime
-                classListRow[11] = dataReader.GetValue(11).ToString();
-                //fld_dateTime
-                classListRow[12] = dataReader.GetValue(12).ToString();
-                //fld_dateTime
-                classListRow[13] = dataReader.GetValue(13).ToString();
-                //fld_dateTime
-                classListRow[14] = dataReader.GetValue(14).ToString();
+
 
 
                 classListSet.Add(classListRow);
@@ -632,7 +538,7 @@ namespace back
 
             while (dataReader.Read())
             {
-                classListRow = new string[15];
+                classListRow = new string[10];
 
                 //fld_id, fld_firstName, fld_lastName,fld_personalIDnumber, fld_deviceID, fld_latitube, fld_longitude, fld_dateTime
                 //fld_id
@@ -655,16 +561,7 @@ namespace back
                 classListRow[8] = dataReader.GetValue(8).ToString();
                 //fld_dateTime
                 classListRow[9] = dataReader.GetValue(9).ToString();
-                //fld_dateTime
-                classListRow[10] = dataReader.GetValue(10).ToString();
-                //fld_dateTime
-                classListRow[11] = dataReader.GetValue(11).ToString();
-                //fld_dateTime
-                classListRow[12] = dataReader.GetValue(12).ToString();
-                //fld_dateTime
-                classListRow[13] = dataReader.GetValue(13).ToString();
-                //fld_dateTime
-                classListRow[14] = dataReader.GetValue(14).ToString();
+
 
 
                 classListSet.Add(classListRow);
@@ -688,7 +585,7 @@ namespace back
 
             while (dataReader.Read())
             {
-                classListRow = new string[15];
+                classListRow = new string[10];
 
                 //fld_id, fld_firstName, fld_lastName,fld_personalIDnumber, fld_deviceID, fld_latitube, fld_longitude, fld_dateTime
                 //fld_id
@@ -711,16 +608,7 @@ namespace back
                 classListRow[8] = dataReader.GetValue(8).ToString();
                 //fld_dateTime
                 classListRow[9] = dataReader.GetValue(9).ToString();
-                //fld_dateTime
-                classListRow[10] = dataReader.GetValue(10).ToString();
-                //fld_dateTime
-                classListRow[11] = dataReader.GetValue(11).ToString();
-                //fld_dateTime
-                classListRow[12] = dataReader.GetValue(12).ToString();
-                //fld_dateTime
-                classListRow[13] = dataReader.GetValue(13).ToString();
-                //fld_dateTime
-                classListRow[14] = dataReader.GetValue(14).ToString();
+
 
 
                 classListSet.Add(classListRow);
@@ -744,7 +632,7 @@ namespace back
 
             while (dataReader.Read())
             {
-                classListRow = new string[15];
+                classListRow = new string[10];
 
                 //fld_id, fld_firstName, fld_lastName,fld_personalIDnumber, fld_deviceID, fld_latitube, fld_longitude, fld_dateTime
                 //fld_id
@@ -767,16 +655,6 @@ namespace back
                 classListRow[8] = dataReader.GetValue(8).ToString();
                 //fld_dateTime
                 classListRow[9] = dataReader.GetValue(9).ToString();
-                //fld_dateTime
-                classListRow[10] = dataReader.GetValue(10).ToString();
-                //fld_dateTime
-                classListRow[11] = dataReader.GetValue(11).ToString();
-                //fld_dateTime
-                classListRow[12] = dataReader.GetValue(12).ToString();
-                //fld_dateTime
-                classListRow[13] = dataReader.GetValue(13).ToString();
-                //fld_dateTime
-                classListRow[14] = dataReader.GetValue(14).ToString();
 
 
                 classListSet.Add(classListRow);
@@ -800,7 +678,7 @@ namespace back
 
             while (dataReader.Read())
             {
-                classListRow = new string[15];
+                classListRow = new string[10];
 
                 //fld_id, fld_firstName, fld_lastName,fld_personalIDnumber, fld_deviceID, fld_latitube, fld_longitude, fld_dateTime
                 //fld_id
@@ -823,16 +701,6 @@ namespace back
                 classListRow[8] = dataReader.GetValue(8).ToString();
                 //fld_dateTime
                 classListRow[9] = dataReader.GetValue(9).ToString();
-                //fld_dateTime
-                classListRow[10] = dataReader.GetValue(10).ToString();
-                //fld_dateTime
-                classListRow[11] = dataReader.GetValue(11).ToString();
-                //fld_dateTime
-                classListRow[12] = dataReader.GetValue(12).ToString();
-                //fld_dateTime
-                classListRow[13] = dataReader.GetValue(13).ToString();
-                //fld_dateTime
-                classListRow[14] = dataReader.GetValue(14).ToString();
 
 
                 classListSet.Add(classListRow);
@@ -856,7 +724,7 @@ namespace back
 
             while (dataReader.Read())
             {
-                classListRow = new string[15];
+                classListRow = new string[10];
 
                 //fld_id, fld_firstName, fld_lastName,fld_personalIDnumber, fld_deviceID, fld_latitube, fld_longitude, fld_dateTime
                 //fld_id
@@ -879,16 +747,6 @@ namespace back
                 classListRow[8] = dataReader.GetValue(8).ToString();
                 //fld_dateTime
                 classListRow[9] = dataReader.GetValue(9).ToString();
-                //fld_dateTime
-                classListRow[10] = dataReader.GetValue(10).ToString();
-                //fld_dateTime
-                classListRow[11] = dataReader.GetValue(11).ToString();
-                //fld_dateTime
-                classListRow[12] = dataReader.GetValue(12).ToString();
-                //fld_dateTime
-                classListRow[13] = dataReader.GetValue(13).ToString();
-                //fld_dateTime
-                classListRow[14] = dataReader.GetValue(14).ToString();
 
 
                 classListSet.Add(classListRow);
@@ -912,7 +770,7 @@ namespace back
 
             while (dataReader.Read())
             {
-                classListRow = new string[15];
+                classListRow = new string[10];
 
                 //fld_id, fld_firstName, fld_lastName,fld_personalIDnumber, fld_deviceID, fld_latitube, fld_longitude, fld_dateTime
                 //fld_id
@@ -935,16 +793,7 @@ namespace back
                 classListRow[8] = dataReader.GetValue(8).ToString();
                 //fld_dateTime
                 classListRow[9] = dataReader.GetValue(9).ToString();
-                //fld_dateTime
-                classListRow[10] = dataReader.GetValue(10).ToString();
-                //fld_dateTime
-                classListRow[11] = dataReader.GetValue(11).ToString();
-                //fld_dateTime
-                classListRow[12] = dataReader.GetValue(12).ToString();
-                //fld_dateTime
-                classListRow[13] = dataReader.GetValue(13).ToString();
-                //fld_dateTime
-                classListRow[14] = dataReader.GetValue(14).ToString();
+
 
 
                 classListSet.Add(classListRow);
@@ -968,7 +817,7 @@ namespace back
 
             while (dataReader.Read())
             {
-                classListRow = new string[15];
+                classListRow = new string[10];
 
                 //fld_id, fld_firstName, fld_lastName,fld_personalIDnumber, fld_deviceID, fld_latitube, fld_longitude, fld_dateTime
                 //fld_id
@@ -991,16 +840,7 @@ namespace back
                 classListRow[8] = dataReader.GetValue(8).ToString();
                 //fld_dateTime
                 classListRow[9] = dataReader.GetValue(9).ToString();
-                //fld_dateTime
-                classListRow[10] = dataReader.GetValue(10).ToString();
-                //fld_dateTime
-                classListRow[11] = dataReader.GetValue(11).ToString();
-                //fld_dateTime
-                classListRow[12] = dataReader.GetValue(12).ToString();
-                //fld_dateTime
-                classListRow[13] = dataReader.GetValue(13).ToString();
-                //fld_dateTime
-                classListRow[14] = dataReader.GetValue(14).ToString();
+
 
 
                 classListSet.Add(classListRow);
@@ -1024,7 +864,7 @@ namespace back
 
             while (dataReader.Read())
             {
-                classListRow = new string[15];
+                classListRow = new string[10];
 
                 //fld_id, fld_firstName, fld_lastName,fld_personalIDnumber, fld_deviceID, fld_latitube, fld_longitude, fld_dateTime
                 //fld_id
@@ -1047,16 +887,6 @@ namespace back
                 classListRow[8] = dataReader.GetValue(8).ToString();
                 //fld_dateTime
                 classListRow[9] = dataReader.GetValue(9).ToString();
-                //fld_dateTime
-                classListRow[10] = dataReader.GetValue(10).ToString();
-                //fld_dateTime
-                classListRow[11] = dataReader.GetValue(11).ToString();
-                //fld_dateTime
-                classListRow[12] = dataReader.GetValue(12).ToString();
-                //fld_dateTime
-                classListRow[13] = dataReader.GetValue(13).ToString();
-                //fld_dateTime
-                classListRow[14] = dataReader.GetValue(14).ToString();
 
 
                 classListSet.Add(classListRow);
@@ -1080,7 +910,7 @@ namespace back
 
             while (dataReader.Read())
             {
-                classListRow = new string[15];
+                classListRow = new string[10];
 
                 //fld_id, fld_firstName, fld_lastName,fld_personalIDnumber, fld_deviceID, fld_latitube, fld_longitude, fld_dateTime
                 //fld_id
@@ -1103,16 +933,7 @@ namespace back
                 classListRow[8] = dataReader.GetValue(8).ToString();
                 //fld_dateTime
                 classListRow[9] = dataReader.GetValue(9).ToString();
-                //fld_dateTime
-                classListRow[10] = dataReader.GetValue(10).ToString();
-                //fld_dateTime
-                classListRow[11] = dataReader.GetValue(11).ToString();
-                //fld_dateTime
-                classListRow[12] = dataReader.GetValue(12).ToString();
-                //fld_dateTime
-                classListRow[13] = dataReader.GetValue(13).ToString();
-                //fld_dateTime
-                classListRow[14] = dataReader.GetValue(14).ToString();
+
 
 
                 classListSet.Add(classListRow);
@@ -1136,7 +957,7 @@ namespace back
 
             while (dataReader.Read())
             {
-                classListRow = new string[15];
+                classListRow = new string[10];
 
                 //fld_id, fld_firstName, fld_lastName,fld_personalIDnumber, fld_deviceID, fld_latitube, fld_longitude, fld_dateTime
                 //fld_id
@@ -1159,16 +980,6 @@ namespace back
                 classListRow[8] = dataReader.GetValue(8).ToString();
                 //fld_dateTime
                 classListRow[9] = dataReader.GetValue(9).ToString();
-                //fld_dateTime
-                classListRow[10] = dataReader.GetValue(10).ToString();
-                //fld_dateTime
-                classListRow[11] = dataReader.GetValue(11).ToString();
-                //fld_dateTime
-                classListRow[12] = dataReader.GetValue(12).ToString();
-                //fld_dateTime
-                classListRow[13] = dataReader.GetValue(13).ToString();
-                //fld_dateTime
-                classListRow[14] = dataReader.GetValue(14).ToString();
 
 
                 classListSet.Add(classListRow);
@@ -1192,7 +1003,7 @@ namespace back
 
             while (dataReader.Read())
             {
-                classListRow = new string[15];
+                classListRow = new string[10];
 
                 //fld_id, fld_firstName, fld_lastName,fld_personalIDnumber, fld_deviceID, fld_latitube, fld_longitude, fld_dateTime
                 //fld_id
@@ -1215,16 +1026,7 @@ namespace back
                 classListRow[8] = dataReader.GetValue(8).ToString();
                 //fld_dateTime
                 classListRow[9] = dataReader.GetValue(9).ToString();
-                //fld_dateTime
-                classListRow[10] = dataReader.GetValue(10).ToString();
-                //fld_dateTime
-                classListRow[11] = dataReader.GetValue(11).ToString();
-                //fld_dateTime
-                classListRow[12] = dataReader.GetValue(12).ToString();
-                //fld_dateTime
-                classListRow[13] = dataReader.GetValue(13).ToString();
-                //fld_dateTime
-                classListRow[14] = dataReader.GetValue(14).ToString();
+
 
 
                 classListSet.Add(classListRow);
@@ -1248,7 +1050,7 @@ namespace back
 
             while (dataReader.Read())
             {
-                classListRow = new string[15];
+                classListRow = new string[10];
 
                 //fld_id, fld_firstName, fld_lastName,fld_personalIDnumber, fld_deviceID, fld_latitube, fld_longitude, fld_dateTime
                 //fld_id
@@ -1271,17 +1073,6 @@ namespace back
                 classListRow[8] = dataReader.GetValue(8).ToString();
                 //fld_dateTime
                 classListRow[9] = dataReader.GetValue(9).ToString();
-                //fld_dateTime
-                classListRow[10] = dataReader.GetValue(10).ToString();
-                //fld_dateTime
-                classListRow[11] = dataReader.GetValue(11).ToString();
-                //fld_dateTime
-                classListRow[12] = dataReader.GetValue(12).ToString();
-                //fld_dateTime
-                classListRow[13] = dataReader.GetValue(13).ToString();
-                //fld_dateTime
-                classListRow[14] = dataReader.GetValue(14).ToString();
-
 
                 classListSet.Add(classListRow);
             }
@@ -1304,7 +1095,7 @@ namespace back
 
             while (dataReader.Read())
             {
-                classListRow = new string[15];
+                classListRow = new string[10];
 
                 //fld_id, fld_firstName, fld_lastName,fld_personalIDnumber, fld_deviceID, fld_latitube, fld_longitude, fld_dateTime
                 //fld_id
@@ -1327,16 +1118,7 @@ namespace back
                 classListRow[8] = dataReader.GetValue(8).ToString();
                 //fld_dateTime
                 classListRow[9] = dataReader.GetValue(9).ToString();
-                //fld_dateTime
-                classListRow[10] = dataReader.GetValue(10).ToString();
-                //fld_dateTime
-                classListRow[11] = dataReader.GetValue(11).ToString();
-                //fld_dateTime
-                classListRow[12] = dataReader.GetValue(12).ToString();
-                //fld_dateTime
-                classListRow[13] = dataReader.GetValue(13).ToString();
-                //fld_dateTime
-                classListRow[14] = dataReader.GetValue(14).ToString();
+
 
 
                 classListSet.Add(classListRow);
@@ -1360,7 +1142,7 @@ namespace back
 
             while (dataReader.Read())
             {
-                classListRow = new string[15];
+                classListRow = new string[10];
 
                 //fld_id, fld_firstName, fld_lastName,fld_personalIDnumber, fld_deviceID, fld_latitube, fld_longitude, fld_dateTime
                 //fld_id
@@ -1383,16 +1165,6 @@ namespace back
                 classListRow[8] = dataReader.GetValue(8).ToString();
                 //fld_dateTime
                 classListRow[9] = dataReader.GetValue(9).ToString();
-                //fld_dateTime
-                classListRow[10] = dataReader.GetValue(10).ToString();
-                //fld_dateTime
-                classListRow[11] = dataReader.GetValue(11).ToString();
-                //fld_dateTime
-                classListRow[12] = dataReader.GetValue(12).ToString();
-                //fld_dateTime
-                classListRow[13] = dataReader.GetValue(13).ToString();
-                //fld_dateTime
-                classListRow[14] = dataReader.GetValue(14).ToString();
 
 
                 classListSet.Add(classListRow);
@@ -1416,7 +1188,7 @@ namespace back
 
             while (dataReader.Read())
             {
-                classListRow = new string[15];
+                classListRow = new string[10];
 
                 //fld_id, fld_firstName, fld_lastName,fld_personalIDnumber, fld_deviceID, fld_latitube, fld_longitude, fld_dateTime
                 //fld_id
@@ -1439,16 +1211,7 @@ namespace back
                 classListRow[8] = dataReader.GetValue(8).ToString();
                 //fld_dateTime
                 classListRow[9] = dataReader.GetValue(9).ToString();
-                //fld_dateTime
-                classListRow[10] = dataReader.GetValue(10).ToString();
-                //fld_dateTime
-                classListRow[11] = dataReader.GetValue(11).ToString();
-                //fld_dateTime
-                classListRow[12] = dataReader.GetValue(12).ToString();
-                //fld_dateTime
-                classListRow[13] = dataReader.GetValue(13).ToString();
-                //fld_dateTime
-                classListRow[14] = dataReader.GetValue(14).ToString();
+
 
 
                 classListSet.Add(classListRow);
@@ -1472,7 +1235,7 @@ namespace back
 
             while (dataReader.Read())
             {
-                classListRow = new string[15];
+                classListRow = new string[10];
 
                 //fld_id, fld_firstName, fld_lastName,fld_personalIDnumber, fld_deviceID, fld_latitube, fld_longitude, fld_dateTime
                 //fld_id
@@ -1495,16 +1258,6 @@ namespace back
                 classListRow[8] = dataReader.GetValue(8).ToString();
                 //fld_dateTime
                 classListRow[9] = dataReader.GetValue(9).ToString();
-                //fld_dateTime
-                classListRow[10] = dataReader.GetValue(10).ToString();
-                //fld_dateTime
-                classListRow[11] = dataReader.GetValue(11).ToString();
-                //fld_dateTime
-                classListRow[12] = dataReader.GetValue(12).ToString();
-                //fld_dateTime
-                classListRow[13] = dataReader.GetValue(13).ToString();
-                //fld_dateTime
-                classListRow[14] = dataReader.GetValue(14).ToString();
 
 
                 classListSet.Add(classListRow);
@@ -1528,7 +1281,7 @@ namespace back
 
             while (dataReader.Read())
             {
-                classListRow = new string[15];
+                classListRow = new string[10];
 
                 //fld_id, fld_firstName, fld_lastName,fld_personalIDnumber, fld_deviceID, fld_latitube, fld_longitude, fld_dateTime
                 //fld_id
@@ -1551,16 +1304,7 @@ namespace back
                 classListRow[8] = dataReader.GetValue(8).ToString();
                 //fld_dateTime
                 classListRow[9] = dataReader.GetValue(9).ToString();
-                //fld_dateTime
-                classListRow[10] = dataReader.GetValue(10).ToString();
-                //fld_dateTime
-                classListRow[11] = dataReader.GetValue(11).ToString();
-                //fld_dateTime
-                classListRow[12] = dataReader.GetValue(12).ToString();
-                //fld_dateTime
-                classListRow[13] = dataReader.GetValue(13).ToString();
-                //fld_dateTime
-                classListRow[14] = dataReader.GetValue(14).ToString();
+
 
 
                 classListSet.Add(classListRow);
@@ -1569,7 +1313,53 @@ namespace back
 
             return classListSet;
         }
-        
+
+        public List<string[]> GetSidiList()
+        {
+            List<string[]> classListSet = new List<string[]> { };
+            string[] classListRow;
+
+            sql = "select * from tbl_ClockIn where fld_lastName='Sidi'  ORDER BY  fld_dateTime desc;";
+
+
+            connection.Open();
+            command = new SqlCommand(sql, connection);
+            dataReader = command.ExecuteReader();
+
+            while (dataReader.Read())
+            {
+                classListRow = new string[10];
+
+                //fld_id, fld_firstName, fld_lastName,fld_personalIDnumber, fld_deviceID, fld_latitube, fld_longitude, fld_dateTime
+                //fld_id
+                classListRow[0] = dataReader.GetValue(0).ToString();
+                //fld_firstName
+                classListRow[1] = dataReader.GetValue(1).ToString();
+                //fld_lastName
+                classListRow[2] = dataReader.GetValue(2).ToString();
+                //fld_personalIDnumber
+                classListRow[3] = dataReader.GetValue(3).ToString();
+                //fld_deviceID
+                classListRow[4] = dataReader.GetValue(4).ToString();
+                //fld_latitube
+                classListRow[5] = dataReader.GetValue(5).ToString();
+                //fld_longitude
+                classListRow[6] = dataReader.GetValue(6).ToString();
+                //fld_dateTime
+                classListRow[7] = dataReader.GetValue(7).ToString();
+                //fld_dateTime
+                classListRow[8] = dataReader.GetValue(8).ToString();
+                //fld_dateTime
+                classListRow[9] = dataReader.GetValue(9).ToString();
+
+                classListSet.Add(classListRow);
+            }
+
+
+            return classListSet;
+        }
+
+
         public bool AddLecturer(string name, string password)
         {
             sql = "insert into Lecturers(name,password) values ('" + name + "','" + password + "'); ";

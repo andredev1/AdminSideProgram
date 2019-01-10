@@ -20,6 +20,8 @@ namespace WindowsFormsApp4
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'dVchocDataSet1.tbl_ClockIn' table. You can move, or remove it, as needed.
+            this.tbl_ClockInTableAdapter1.Fill(this.dVchocDataSet1.tbl_ClockIn);
             // TODO: This line of code loads data into the 'dVchocDataSet.tbl_ClockIn' table. You can move, or remove it, as needed.
             this.tbl_ClockInTableAdapter.Fill(this.dVchocDataSet.tbl_ClockIn);
 
@@ -27,24 +29,19 @@ namespace WindowsFormsApp4
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string file = ("ClockIn_Report " + System.DateTime.Now.ToString("yyyy-MM-dd HHTmm") + ".xls");
+            string file = ("Big_ClockIn_Report " + System.DateTime.Now.ToString("yyyy-MM-dd HHTmm") + ".xls");
             Workbook workbook = new Workbook();
             Worksheet worksheet = new Worksheet("First Sheet");
-            worksheet.Cells[0, 0] = new Cell("fld_id");
-            worksheet.Cells[0, 1] = new Cell("fld_firstName");
-            worksheet.Cells[0, 2] = new Cell("fld_lastName");
-            worksheet.Cells[0, 3] = new Cell("fld_personalIDnumber");
-            worksheet.Cells[0, 4] = new Cell("fld_osName");
-            worksheet.Cells[0, 5] = new Cell("fld_osVersion");
-            worksheet.Cells[0, 6] = new Cell("fld_browserName");
-            worksheet.Cells[0, 7] = new Cell("fld_browserVersion");
-            worksheet.Cells[0, 8] = new Cell("fld_navigatorUserAgent");
-            worksheet.Cells[0, 9] = new Cell("fld_navigatorAppVersion");
-            worksheet.Cells[0, 10] = new Cell("fld_navigatorPlatform");
-            worksheet.Cells[0, 11] = new Cell("fld_navigatorVendor");
-            worksheet.Cells[0, 12] = new Cell("fld_latitube");
-            worksheet.Cells[0, 13] = new Cell("fld_longitude");
-            worksheet.Cells[0, 14] = new Cell("fld_dateTime");
+            worksheet.Cells[0, 0] = new Cell("fld_firstName");
+            worksheet.Cells[0, 1] = new Cell("fld_lastName");
+            worksheet.Cells[0, 2] = new Cell("fld_personalIDnumber");
+            worksheet.Cells[0, 3] = new Cell("fld_osName");
+            worksheet.Cells[0, 4] = new Cell("fld_osVersion");
+            worksheet.Cells[0, 5] = new Cell("fld_browserName");
+            worksheet.Cells[0, 6] = new Cell("fld_browserVersion");
+            worksheet.Cells[0, 7] = new Cell("fld_latitube");
+            worksheet.Cells[0, 8] = new Cell("fld_longitude");
+            worksheet.Cells[0, 9] = new Cell("fld_dateTime");
             
             List<string[]> queryResult = new back.SQLConnect().GetClassList();
             for (int i = 0; i < queryResult.Count ; i++)
@@ -59,11 +56,6 @@ namespace WindowsFormsApp4
                 worksheet.Cells[i+1, 7] = new Cell(queryResult[i].ToArray()[7]);
                 worksheet.Cells[i+1, 8] = new Cell(queryResult[i].ToArray()[8]);
                 worksheet.Cells[i+1, 9] = new Cell(queryResult[i].ToArray()[9]);
-                worksheet.Cells[i+1, 10] = new Cell(queryResult[i].ToArray()[10]);
-                worksheet.Cells[i+1, 11] = new Cell(queryResult[i].ToArray()[11]);
-                worksheet.Cells[i+1, 12] = new Cell(queryResult[i].ToArray()[12]);
-                worksheet.Cells[i+1, 13] = new Cell(queryResult[i].ToArray()[13]);
-                worksheet.Cells[i+1, 14] = new Cell(queryResult[i].ToArray()[14]);
             }
 
 
@@ -92,24 +84,19 @@ namespace WindowsFormsApp4
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string file = ("Absent List " + System.DateTime.Now.ToString("yyyy-MM-dd HHTmm") + ".xls");
+            string file = ("DV pod clock in list " + System.DateTime.Now.ToString("yyyy-MM-dd HHTmm") + ".xls");
             Workbook workbook = new Workbook();
             Worksheet worksheet = new Worksheet("First Sheet");
-            worksheet.Cells[0, 0] = new Cell("fld_id");
-            worksheet.Cells[0, 1] = new Cell("fld_firstName");
-            worksheet.Cells[0, 2] = new Cell("fld_lastName");
-            worksheet.Cells[0, 3] = new Cell("fld_personalIDnumber");
-            worksheet.Cells[0, 4] = new Cell("fld_osName");
-            worksheet.Cells[0, 5] = new Cell("fld_osVersion");
-            worksheet.Cells[0, 6] = new Cell("fld_browserName");
-            worksheet.Cells[0, 7] = new Cell("fld_browserVersion");
-            worksheet.Cells[0, 8] = new Cell("fld_navigatorUserAgent");
-            worksheet.Cells[0, 9] = new Cell("fld_navigatorAppVersion");
-            worksheet.Cells[0, 10] = new Cell("fld_navigatorPlatform");
-            worksheet.Cells[0, 11] = new Cell("fld_navigatorVendor");
-            worksheet.Cells[0, 12] = new Cell("fld_latitube");
-            worksheet.Cells[0, 13] = new Cell("fld_longitude");
-            worksheet.Cells[0, 14] = new Cell("fld_dateTime");
+            worksheet.Cells[0, 0] = new Cell("fld_firstName");
+            worksheet.Cells[0, 1] = new Cell("fld_lastName");
+            worksheet.Cells[0, 2] = new Cell("fld_personalIDnumber");
+            worksheet.Cells[0, 3] = new Cell("fld_osName");
+            worksheet.Cells[0, 4] = new Cell("fld_osVersion");
+            worksheet.Cells[0, 5] = new Cell("fld_browserName");
+            worksheet.Cells[0, 6] = new Cell("fld_browserVersion");
+            worksheet.Cells[0, 7] = new Cell("fld_latitube");
+            worksheet.Cells[0, 8] = new Cell("fld_longitude");
+            worksheet.Cells[0, 9] = new Cell("fld_dateTime");
 
             List<string[]> queryResult = new back.SQLConnect().GetMufamadiList();
                 int i= PrintToCells(queryResult, worksheet, 1);
@@ -184,6 +171,9 @@ namespace WindowsFormsApp4
             queryResult = new back.SQLConnect().GetCebeniList();
             i = PrintToCells(queryResult, worksheet, i) + 1;
 
+            queryResult = new back.SQLConnect().GetSidiList();
+            i = PrintToCells(queryResult, worksheet, i) + 1;
+
 
 
             workbook.Worksheets.Add(worksheet);
@@ -223,11 +213,6 @@ namespace WindowsFormsApp4
                 worksheet.Cells[i + 1, 7] = new Cell(queryResult[j].ToArray()[7]);
                 worksheet.Cells[i + 1, 8] = new Cell(queryResult[j].ToArray()[8]);
                 worksheet.Cells[i + 1, 9] = new Cell(queryResult[j].ToArray()[9]);
-                worksheet.Cells[i + 1, 10] = new Cell(queryResult[j].ToArray()[10]);
-                worksheet.Cells[i + 1, 11] = new Cell(queryResult[j].ToArray()[11]);
-                worksheet.Cells[i + 1, 12] = new Cell(queryResult[j].ToArray()[12]);
-                worksheet.Cells[i + 1, 13] = new Cell(queryResult[j].ToArray()[13]);
-                worksheet.Cells[i + 1, 14] = new Cell(queryResult[j].ToArray()[14]);
             }
             return i;
         }
